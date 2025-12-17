@@ -1,26 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Shuffle, X, Share2, Lock, HelpCircle, Bookmark, Music, Volume2, VolumeX, SkipForward, SkipBack } from 'lucide-react';
 import { Analytics } from "@vercel/analytics/react";
+import { getTodaysPuzzle } from './puzzles';
 
 export default function LetterGriddleBuffet() {
-  const gameData = {
-    category: "DESSERTS",
-    puzzleNumber: 1,
-    amuseBouche: { word: "PIE", hint: "Classic dessert with a crust", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "TART", hint: "A pastry with fruit filling and no top crust", revealedIndex: 0 },
-        { word: "FUDGE", hint: "Rich, creamy chocolate confection", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "SUNDAE", hint: "Ice cream topped with sauce, whipped cream, and a cherry", revealedIndex: 3 },
-        { word: "BROWNIE", hint: "Dense, chocolate baked square dessert", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🍰", words: [
-        { word: "CUPCAKE", hint: "Small individual cake baked in a cup-shaped mold", revealedIndex: 3 }
-      ]}
-    ]
-  };
+  const gameData = getTodaysPuzzle();
 
   const colors = {
     bgDark: '#4A2C17', bgMid: '#6D4023', bgLight: '#8B5A3C',
@@ -1167,6 +1151,7 @@ Bravo! ✨`}
           </div>
         </div>
       )}
+
       <Analytics />
     </div>
   );
