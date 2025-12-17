@@ -89,6 +89,19 @@ export default function LetterGriddleBuffet() {
   const [showHowToPlayModal, setShowHowToPlayModal] = useState(false);
   const [showMusicModal, setShowMusicModal] = useState(false);
 
+  // Music state
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTrack, setCurrentTrack] = useState(0);
+  const [volume, setVolume] = useState(0.5);
+  const [isMuted, setIsMuted] = useState(false);
+  const audioRef = useRef(null);
+  
+  const musicTracks = [
+    { name: "Chill Vibes 1", file: "/buffet-music1.mp3" },
+    { name: "Chill Vibes 2", file: "/buffet-music2.mp3" },
+    { name: "Chill Vibes 3", file: "/buffet-music3.mp3" },
+  ];
+
   const [gameStartTime, setGameStartTime] = useState(null);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [finalTime, setFinalTime] = useState(null);
@@ -132,21 +145,23 @@ export default function LetterGriddleBuffet() {
 
   const formatTime = (seconds) => `${Math.floor(seconds / 60)}:${(seconds % 60).toString().padStart(2, '0')}`;
 
+  // Candle burns throughout the game (atmospheric timer)
   useEffect(() => {
-    if (currentCourse >= 0 && !isCourseComplete(currentCourse) && !preparingCourse && !categoryUnlocked) {
+    if (!showWelcomeModal && !allComplete) {
       setCandleHeight(100);
       candleTimerRef.current = setInterval(() => {
-        setCandleHeight(prev => prev <= 20 ? 20 : prev - (100 / 60));
+        setCandleHeight(prev => prev <= 15 ? 15 : prev - (100 / 300)); // Burns over 5 minutes
       }, 1000);
     }
     return () => { if (candleTimerRef.current) clearInterval(candleTimerRef.current); };
-  }, [currentCourse, preparingCourse, categoryUnlocked]);
+  }, [showWelcomeModal, allComplete]);
 
+  // Stop candle when game completes
   useEffect(() => {
-    if ((currentCourse >= 0 && isCourseComplete(currentCourse)) || categoryUnlocked) {
+    if (allComplete) {
       if (candleTimerRef.current) clearInterval(candleTimerRef.current);
     }
-  }, [wordStates, currentCourse, categoryUnlocked]);
+  }, [allComplete]);
 
   useEffect(() => {
     if (amuseBoucheState.completed && !amuseBoucheComplete) {
@@ -449,6 +464,70 @@ export default function LetterGriddleBuffet() {
     }
   }, [allComplete]);
 
+  // Music control functions
+  const togglePlay = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch(e => console.log('Audio play failed:', e));
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const toggleMute = () => {
+    if (audioRef.current) {
+      audioRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  const handleVolumeChange = (e) => {
+    const newVolume = parseFloat(e.target.value);
+    setVolume(newVolume);
+    if (audioRef.current) {
+      audioRef.current.volume = newVolume;
+    }
+  };
+
+  const nextTrack = () => {
+    const next = (currentTrack + 1) % musicTracks.length;
+    setCurrentTrack(next);
+  };
+
+  const prevTrack = () => {
+    const prev = (currentTrack - 1 + musicTracks.length) % musicTracks.length;
+    setCurrentTrack(prev);
+  };
+
+  const selectTrack = (index) => {
+    setCurrentTrack(index);
+  };
+
+  // Handle track change
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.src = musicTracks[currentTrack].file;
+      if (isPlaying) {
+        audioRef.current.play().catch(e => console.log('Audio play failed:', e));
+      }
+    }
+  }, [currentTrack]);
+
+  // Handle track ending - auto-play next
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio) {
+      const handleEnded = () => {
+        const next = (currentTrack + 1) % musicTracks.length;
+        setCurrentTrack(next);
+      };
+      audio.addEventListener('ended', handleEnded);
+      return () => audio.removeEventListener('ended', handleEnded);
+    }
+  }, [currentTrack]);
+
   const sparkleColors = [colors.copper, colors.copperLight, colors.cream, '#E8B4A0', '#D4A574', colors.terracotta];
 
   return (
@@ -465,6 +544,9 @@ export default function LetterGriddleBuffet() {
         @keyframes flicker { 0%, 100% { opacity: 1; transform: scale(1) translateX(0); } 25% { opacity: 0.8; transform: scale(1.1) translateX(-1px); } 50% { opacity: 1; transform: scale(0.9) translateX(1px); } 75% { opacity: 0.9; transform: scale(1.05) translateX(-0.5px); } }
         @keyframes candle-glow { 0%, 100% { box-shadow: 0 0 10px #FFD700, 0 0 20px #FFA500, 0 0 30px #FF8C00; } 50% { box-shadow: 0 0 15px #FFD700, 0 0 25px #FFA500, 0 0 40px #FF8C00; } }
       `}</style>
+
+      {/* Hidden audio element for music */}
+      <audio ref={audioRef} src={musicTracks[currentTrack].file} />
 
       {/* Sparkles */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
@@ -540,17 +622,20 @@ export default function LetterGriddleBuffet() {
       )}
 
       {/* Candle */}
-      {currentCourse >= 0 && !allComplete && (
-        <div className="fixed right-4 top-1/3 flex flex-col items-center z-30" style={{ pointerEvents: 'none' }}>
+      {!allComplete && !showWelcomeModal && (
+        <div className="fixed right-6 top-1/4 flex flex-col items-center z-30" style={{ pointerEvents: 'none' }}>
+          {/* Flame */}
           <div className="relative mb-1" style={{ opacity: candleHeight > 0 ? 1 : 0 }}>
-            <div className="w-4 h-6 rounded-full" style={{ background: 'linear-gradient(to top, #FF6B00 0%, #FFD700 50%, #FFFACD 100%)', animation: 'flicker 0.5s ease-in-out infinite, candle-glow 1s ease-in-out infinite', filter: 'blur(0.5px)' }} />
-            <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-2 h-3 rounded-full" style={{ background: 'linear-gradient(to top, #FFD700 0%, #FFFACD 100%)', animation: 'flicker 0.3s ease-in-out infinite reverse' }} />
+            <div className="w-5 h-8 rounded-full" style={{ background: 'linear-gradient(to top, #FF6B00 0%, #FFD700 50%, #FFFACD 100%)', animation: 'flicker 0.5s ease-in-out infinite, candle-glow 1s ease-in-out infinite', filter: 'blur(0.5px)' }} />
+            <div className="absolute top-1 left-1/2 transform -translate-x-1/2 w-2 h-4 rounded-full" style={{ background: 'linear-gradient(to top, #FFD700 0%, #FFFACD 100%)', animation: 'flicker 0.3s ease-in-out infinite reverse' }} />
           </div>
-          <div className="relative w-6 rounded-t-sm overflow-hidden transition-all duration-1000" style={{ height: `${Math.max(candleHeight * 0.8, 5)}px`, maxHeight: '80px', background: `linear-gradient(135deg, ${colors.cream} 0%, ${colors.creamWarm} 100%)`, border: `1px solid ${colors.copper}40` }}>
-            <div className="absolute top-0 left-1 w-1 h-2 rounded-b-full" style={{ background: colors.creamWarm }} />
+          {/* Candle body */}
+          <div className="relative w-8 rounded-t-sm overflow-hidden transition-all duration-1000" style={{ height: `${Math.max(candleHeight * 0.9, 10)}px`, maxHeight: '90px', background: `linear-gradient(135deg, ${colors.cream} 0%, ${colors.creamWarm} 100%)`, border: `1px solid ${colors.copper}40`, boxShadow: `0 0 15px ${colors.copper}30` }}>
+            <div className="absolute top-0 left-1 w-1 h-3 rounded-b-full" style={{ background: colors.creamWarm }} />
           </div>
-          <div className="w-10 h-3 rounded-b-lg" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)` }} />
-          <span className="text-xs mt-2" style={{ color: colors.cream, opacity: 0.7, fontSize: '10px' }}>🕯️</span>
+          {/* Candle holder */}
+          <div className="w-12 h-4 rounded-b-lg" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, border: `1px solid ${colors.copperLight}40` }} />
+          <span className="text-sm mt-2" style={{ color: colors.cream, opacity: 0.8 }}>🕯️</span>
         </div>
       )}
 
@@ -956,28 +1041,27 @@ Bravo! ✨`}
             </div>
             <div className="p-4 rounded-xl mb-4 text-center" style={{ background: `${colors.wine}60`, border: `1px solid ${colors.copper}40` }}>
               <p className="text-xs mb-1" style={{ color: colors.creamWarm, opacity: 0.7 }}>Now Playing</p>
-              <p className="text-lg" style={{ color: colors.cream, fontFamily: 'Georgia, serif' }}>Chill Vibes</p>
+              <p className="text-lg" style={{ color: colors.cream, fontFamily: 'Georgia, serif' }}>{musicTracks[currentTrack].name}</p>
             </div>
             <div className="flex justify-center items-center gap-4 mb-6">
-              <button className="p-2 rounded-full" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, color: colors.cream }}><SkipBack size={20} /></button>
-              <button className="p-4 rounded-full" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, border: `2px solid ${colors.cream}50`, color: colors.cream }}><span className="text-2xl">▶️</span></button>
-              <button className="p-2 rounded-full" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, color: colors.cream }}><SkipForward size={20} /></button>
+              <button onClick={prevTrack} className="p-2 rounded-full transition-transform hover:scale-110" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, color: colors.cream }}><SkipBack size={20} /></button>
+              <button onClick={togglePlay} className="p-4 rounded-full transition-transform hover:scale-110" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, border: `2px solid ${colors.cream}50`, color: colors.cream }}><span className="text-2xl">{isPlaying ? '⏸️' : '▶️'}</span></button>
+              <button onClick={nextTrack} className="p-2 rounded-full transition-transform hover:scale-110" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, color: colors.cream }}><SkipForward size={20} /></button>
             </div>
             <div className="flex items-center gap-3 p-3 rounded-xl mb-4" style={{ background: `${colors.wine}40`, border: `1px solid ${colors.copper}30` }}>
-              <Volume2 size={20} style={{ color: colors.cream }} />
-              <div className="flex-1 h-2 rounded-full" style={{ background: `linear-gradient(to right, ${colors.copper} 50%, ${colors.bgDark} 50%)` }} />
+              <button onClick={toggleMute} style={{ color: colors.cream }}>{isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}</button>
+              <input type="range" min="0" max="1" step="0.1" value={isMuted ? 0 : volume} onChange={handleVolumeChange} className="flex-1 h-2 rounded-full appearance-none cursor-pointer" style={{ background: `linear-gradient(to right, ${colors.copper} ${volume * 100}%, ${colors.bgDark} ${volume * 100}%)` }} />
             </div>
             <div className="space-y-2">
               <p className="text-xs mb-2" style={{ color: colors.creamWarm, opacity: 0.7 }}>Playlist</p>
-              {['Chill Vibes 1', 'Chill Vibes 2', 'Chill Vibes 3'].map((track, index) => (
-                <button key={index} className="w-full p-3 rounded-xl text-left flex items-center gap-3" style={{ background: index === 0 ? `${colors.copper}40` : `${colors.wine}30`, border: index === 0 ? `1px solid ${colors.copper}` : `1px solid ${colors.copper}20`, color: colors.cream }}>
-                  <span>{index === 0 ? '🎵' : '🎶'}</span>
-                  <span className="flex-1">{track}</span>
-                  {index === 0 && <span className="text-xs" style={{ color: colors.copperLight }}>Selected</span>}
+              {musicTracks.map((track, index) => (
+                <button key={index} onClick={() => selectTrack(index)} className="w-full p-3 rounded-xl text-left flex items-center gap-3 transition-all" style={{ background: currentTrack === index ? `${colors.copper}40` : `${colors.wine}30`, border: currentTrack === index ? `1px solid ${colors.copper}` : `1px solid ${colors.copper}20`, color: colors.cream }}>
+                  <span>{currentTrack === index && isPlaying ? '🎵' : '🎶'}</span>
+                  <span className="flex-1">{track.name}</span>
+                  {currentTrack === index && <span className="text-xs" style={{ color: colors.copperLight }}>{isPlaying ? 'Playing' : 'Selected'}</span>}
                 </button>
               ))}
             </div>
-            <p className="text-center text-xs mt-4" style={{ color: colors.creamWarm, opacity: 0.6 }}>Music plays when deployed with audio files</p>
           </div>
         </div>
       )}
