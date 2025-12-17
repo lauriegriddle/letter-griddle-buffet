@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Shuffle, X, Share2, Lock, HelpCircle, Bookmark, Music, Volume2, VolumeX, SkipForward, SkipBack } from 'lucide-react';
+import { Analytics } from "@vercel/analytics/react";
 
 export default function LetterGriddleBuffet() {
   const gameData = {
@@ -1166,6 +1167,7 @@ Bravo! ✨`}
           </div>
         </div>
       )}
+      <Analytics />
     </div>
   );
 }
