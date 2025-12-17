@@ -29,6 +29,14 @@ export default function LetterGriddleBuffet() {
   };
 
   const wordCompleteMessages = ["Delizioso! 🍽️", "Magnifico! ✨", "Bellissimo! 🎉", "Perfetto! ⭐", "Bravo! ✨"];
+  
+  const completionMessages = [
+    "A Feast of Feasts!",
+    "Simply Divine!",
+    "Dinner is Served... and Solved!",
+    "Five Stars for Five Words!",
+    "A Meal to Remember!"
+  ];
 
   const scrambleWord = (word) => {
     const letters = word.split('');
@@ -81,6 +89,7 @@ export default function LetterGriddleBuffet() {
   const [celebratingWord, setCelebratingWord] = useState(null);
   const [celebratingCategory, setCelebratingCategory] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
+  const [completionMessage, setCompletionMessage] = useState('');
   const [showStatsModal, setShowStatsModal] = useState(false);
   const [showShareModal, setShowShareModal] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
@@ -88,6 +97,8 @@ export default function LetterGriddleBuffet() {
   const [showWelcomeModal, setShowWelcomeModal] = useState(true);
   const [showHowToPlayModal, setShowHowToPlayModal] = useState(false);
   const [showMusicModal, setShowMusicModal] = useState(false);
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+  const [showTermsModal, setShowTermsModal] = useState(false);
 
   // Music state
   const [isPlaying, setIsPlaying] = useState(false);
@@ -97,9 +108,9 @@ export default function LetterGriddleBuffet() {
   const audioRef = useRef(null);
   
   const musicTracks = [
-    { name: "Chill Vibes 1", file: "/buffet-music1.mp3" },
-    { name: "Chill Vibes 2", file: "/buffet-music2.mp3" },
-    { name: "Chill Vibes 3", file: "/buffet-music3.mp3" },
+    { name: "Fine Dining", file: "/buffet-music1.mp3" },
+    { name: "Elegance", file: "/buffet-music2.mp3" },
+    { name: "Chilled", file: "/buffet-music3.mp3" },
   ];
 
   const [gameStartTime, setGameStartTime] = useState(null);
@@ -405,7 +416,7 @@ export default function LetterGriddleBuffet() {
 
   // Keyboard handler
   const handleKeyDown = useCallback((e) => {
-    if (showWelcomeModal || showHowToPlayModal || showStatsModal || showShareModal || showMusicModal) return;
+    if (showWelcomeModal || showHowToPlayModal || showStatsModal || showShareModal || showMusicModal || showPrivacyModal || showTermsModal) return;
     const key = e.key.toUpperCase();
     if (!/^[A-Z]$/.test(key)) return;
     
@@ -450,7 +461,7 @@ export default function LetterGriddleBuffet() {
         }
       }
     }
-  }, [amuseBoucheComplete, amuseBoucheState, categoryUnlocked, categoryState, currentCourse, wordStates, showWelcomeModal, showHowToPlayModal, showStatsModal, showShareModal, showMusicModal]);
+  }, [amuseBoucheComplete, amuseBoucheState, categoryUnlocked, categoryState, currentCourse, wordStates, showWelcomeModal, showHowToPlayModal, showStatsModal, showShareModal, showMusicModal, showPrivacyModal, showTermsModal]);
 
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown);
@@ -460,6 +471,7 @@ export default function LetterGriddleBuffet() {
   useEffect(() => {
     if (allComplete && !showConfetti) {
       setShowConfetti(true);
+      setCompletionMessage(completionMessages[Math.floor(Math.random() * completionMessages.length)]);
       setTimeout(() => setShowConfetti(false), 5000);
     }
   }, [allComplete]);
@@ -756,7 +768,7 @@ export default function LetterGriddleBuffet() {
               <div className="flex items-center justify-center gap-2 mb-4">
                 <span className="text-xl">{categoryUnlocked ? '✨' : <Lock size={20} style={{ color: colors.copper }} />}</span>
                 <h2 className="text-lg font-medium" style={{ color: colors.cream, fontFamily: 'Georgia, serif' }}>
-                  {categoryState.completed ? 'Category Revealed!' : categoryUnlocked ? 'Category Griddle' : 'Complete all courses to unlock'}
+                  {categoryState.completed ? 'Category Revealed!' : categoryUnlocked ? 'Category Griddle' : "Complete all courses to unlock the chef's secret category griddle"}
                 </h2>
                 <span className="text-xl">{categoryUnlocked ? '✨' : <Lock size={20} style={{ color: colors.copper }} />}</span>
               </div>
@@ -807,7 +819,7 @@ export default function LetterGriddleBuffet() {
             {/* Completion Banner */}
             {allComplete && (
               <div className="mb-6 p-6 rounded-2xl text-center" style={{ background: `linear-gradient(135deg, ${colors.wine}80 0%, ${colors.bgDark}90 100%)`, border: `2px solid ${colors.copper}`, animation: 'glow-pulse 2s ease-in-out infinite' }}>
-                <p className="text-4xl font-light mb-2" style={{ color: colors.copperLight, fontFamily: 'Georgia, serif' }}>What a Feast!</p>
+                <p className="text-4xl font-light mb-2" style={{ color: colors.copperLight, fontFamily: 'Georgia, serif' }}>{completionMessage || "A Feast of Feasts!"}</p>
                 <p style={{ color: colors.cream }} className="text-sm mb-2 opacity-80">You've completed the entire buffet!</p>
                 {finalTime && <p style={{ color: colors.creamWarm }} className="text-lg mb-2">🍽️ You dined for {formatTime(finalTime)}</p>}
                 <button onClick={() => setShowShareModal(true)} className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, color: colors.cream }}>
@@ -927,6 +939,10 @@ export default function LetterGriddleBuffet() {
         </div>
         <div className="mt-6 text-center text-xs" style={{ color: colors.cream, opacity: 0.6 }}>
           <p>© {new Date().getFullYear()} Letter Griddle Buffet</p>
+          <div className="mt-2 space-x-4">
+            <button onClick={() => setShowPrivacyModal(true)} className="underline hover:opacity-80">Privacy</button>
+            <button onClick={() => setShowTermsModal(true)} className="underline hover:opacity-80">Terms</button>
+          </div>
         </div>
       </div>
 
@@ -1037,7 +1053,6 @@ Bravo! ✨`}
             <div className="text-center mb-6">
               <div className="text-4xl mb-2">🎵</div>
               <h2 className="text-2xl font-light" style={{ color: colors.cream, fontFamily: 'Georgia, serif' }}>Dinner Music</h2>
-              <p className="text-sm mt-1 italic" style={{ color: colors.creamWarm, opacity: 0.8 }}>Set the mood for your meal</p>
             </div>
             <div className="p-4 rounded-xl mb-4 text-center" style={{ background: `${colors.wine}60`, border: `1px solid ${colors.copper}40` }}>
               <p className="text-xs mb-1" style={{ color: colors.creamWarm, opacity: 0.7 }}>Now Playing</p>
@@ -1062,6 +1077,92 @@ Bravo! ✨`}
                 </button>
               ))}
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Privacy Modal */}
+      {showPrivacyModal && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 p-4" style={{ background: `${colors.bgDark}F5` }} onClick={() => setShowPrivacyModal(false)}>
+          <div className="max-w-lg w-full rounded-3xl p-8 relative max-h-[85vh] overflow-y-auto" style={{ background: `linear-gradient(135deg, ${colors.bgDark} 0%, ${colors.bgMid} 100%)`, border: `2px solid ${colors.copper}60` }} onClick={(e) => e.stopPropagation()}>
+            <button onClick={() => setShowPrivacyModal(false)} className="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center" style={{ background: colors.copper, color: colors.cream }}><X size={18} /></button>
+            <div className="text-center mb-6">
+              <div className="text-4xl mb-2">🔒</div>
+              <h2 className="text-2xl font-light" style={{ color: colors.cream, fontFamily: 'Georgia, serif' }}>Privacy Policy</h2>
+            </div>
+            <div className="space-y-4 text-sm" style={{ color: colors.creamWarm }}>
+              <p><strong style={{ color: colors.copperLight }}>Last Updated:</strong> December 2025</p>
+              
+              <p>Letter Griddle Buffet ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you play our game.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Information We Collect</h3>
+              <p>We collect minimal information to provide and improve the game experience:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li><strong>Game Progress:</strong> Your puzzle completion status, streaks, and statistics are stored locally on your device using browser storage.</li>
+                <li><strong>Usage Data:</strong> We may collect anonymous analytics about how the game is played to improve the experience.</li>
+              </ul>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>How We Use Your Information</h3>
+              <p>We use the collected information to:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Save your game progress and statistics</li>
+                <li>Improve and optimize the game experience</li>
+                <li>Track anonymous usage patterns</li>
+              </ul>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Data Storage</h3>
+              <p>All game data is stored locally on your device. We do not collect personal information such as your name, email, or location.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Third-Party Services</h3>
+              <p>We may use third-party analytics services that collect anonymous usage data. These services have their own privacy policies.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Children's Privacy</h3>
+              <p>Letter Griddle Buffet is suitable for all ages. We do not knowingly collect personal information from children.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Contact Us</h3>
+              <p>If you have questions about this Privacy Policy, please contact us through our website.</p>
+            </div>
+            <button onClick={() => setShowPrivacyModal(false)} className="w-full py-3 rounded-full text-sm font-semibold mt-6" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, color: colors.cream }}>Close</button>
+          </div>
+        </div>
+      )}
+
+      {/* Terms Modal */}
+      {showTermsModal && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 p-4" style={{ background: `${colors.bgDark}F5` }} onClick={() => setShowTermsModal(false)}>
+          <div className="max-w-lg w-full rounded-3xl p-8 relative max-h-[85vh] overflow-y-auto" style={{ background: `linear-gradient(135deg, ${colors.bgDark} 0%, ${colors.bgMid} 100%)`, border: `2px solid ${colors.copper}60` }} onClick={(e) => e.stopPropagation()}>
+            <button onClick={() => setShowTermsModal(false)} className="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center" style={{ background: colors.copper, color: colors.cream }}><X size={18} /></button>
+            <div className="text-center mb-6">
+              <div className="text-4xl mb-2">📜</div>
+              <h2 className="text-2xl font-light" style={{ color: colors.cream, fontFamily: 'Georgia, serif' }}>Terms of Service</h2>
+            </div>
+            <div className="space-y-4 text-sm" style={{ color: colors.creamWarm }}>
+              <p><strong style={{ color: colors.copperLight }}>Last Updated:</strong> December 2025</p>
+              
+              <p>Welcome to Letter Griddle Buffet! By accessing or playing this game, you agree to be bound by these Terms of Service.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Use of the Game</h3>
+              <p>Letter Griddle Buffet is provided for personal, non-commercial entertainment purposes. You agree to use the game in accordance with all applicable laws and regulations.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Intellectual Property</h3>
+              <p>All content, design, graphics, and gameplay mechanics of Letter Griddle Buffet are owned by us and are protected by copyright and other intellectual property laws. You may not copy, modify, distribute, or create derivative works without our permission.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Game Progress</h3>
+              <p>Game progress and statistics are stored locally on your device. We are not responsible for any loss of data due to clearing browser data, device changes, or technical issues.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Disclaimer</h3>
+              <p>Letter Griddle Buffet is provided "as is" without warranties of any kind. We do not guarantee that the game will be error-free or uninterrupted.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Limitation of Liability</h3>
+              <p>We shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the game.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Changes to Terms</h3>
+              <p>We reserve the right to modify these Terms of Service at any time. Continued use of the game after changes constitutes acceptance of the new terms.</p>
+              
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Contact</h3>
+              <p>If you have questions about these Terms, please contact us through our website.</p>
+            </div>
+            <button onClick={() => setShowTermsModal(false)} className="w-full py-3 rounded-full text-sm font-semibold mt-6" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, color: colors.cream }}>Close</button>
           </div>
         </div>
       )}
