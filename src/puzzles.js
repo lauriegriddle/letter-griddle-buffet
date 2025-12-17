@@ -479,25 +479,7 @@ const puzzles = [
       ]}
     ]
   },
-  // Puzzle 26 - TREES AND SHRUBS
-  {
-    category: "TREES AND SHRUBS",
-    puzzleNumber: 26,
-    amuseBouche: { word: "ELM", hint: "Shade tree common in parks and streets", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "PALM", hint: "Tropical tree with large fan-shaped or feathery leaves", revealedIndex: 0 },
-        { word: "MAPLE", hint: "Deciduous tree known for its colorful fall foliage and sweet sap", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "BANYAN", hint: "Fig tree with aerial roots that grow down to form additional trunks", revealedIndex: 3 },
-        { word: "JASMINE", hint: "Fragrant flowering shrub often used in perfumes and teas", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "CINNAMON", hint: "Aromatic evergreen tree whose inner bark is used as a spice", revealedIndex: 5 }
-      ]}
-    ]
-  }
+  
 ];
 
 // Function to get today's puzzle based on EST time
@@ -518,7 +500,7 @@ export function getTodaysPuzzle() {
   puzzleDate.setHours(20, 0, 0, 0);
   
   // Calculate days since a reference date (Dec 17, 2025 = launch day)
-  const launchDate = new Date('2025-12-17T20:00:00-05:00');
+  const launchDate = new Date('2025-12-16T20:00:00-05:00');
   const daysSinceLaunch = Math.floor((puzzleDate - launchDate) / (1000 * 60 * 60 * 24));
   
   // Rotate through puzzles
