@@ -392,7 +392,7 @@ export default function LetterGriddleBuffet() {
     const solvedWords = solvedCourseWords + (amuseBoucheState.completed ? 1 : 0);
     const plateEmojis = '🥄' + '🍽️'.repeat(solvedCourseWords);
     const timeStr = finalTime ? `\nDined for ${formatTime(finalTime)}` : '';
-    const shareText = `✨ Letter Griddle Buffet #${gameData.puzzleNumber} 🍽️\nCategory: ${gameData.category} ✨\n${plateEmojis}\n${solvedWords}/${totalWords} words solved!${timeStr}\nBravo! ✨\nPlay at www.lettergriddlebuffet.com`;
+    const shareText = `✨ Letter Griddle Buffet #${gameData.puzzleNumber} 🍽️\nCategory: ${gameData.category} ✨\n${plateEmojis}\n${solvedWords}/${totalWords} words solved!${timeStr}\nBravo! ✨\nNew puzzles daily at 8 PM EST\nPlay at www.lettergriddlebuffet.com`;
     navigator.clipboard.writeText(shareText).then(() => {
       setShareCopied(true);
       setTimeout(() => setShareCopied(false), 2000);
@@ -807,6 +807,8 @@ export default function LetterGriddleBuffet() {
                 <p className="text-4xl font-light mb-2" style={{ color: colors.copperLight, fontFamily: 'Georgia, serif' }}>{completionMessage || "A Feast of Feasts!"}</p>
                 <p style={{ color: colors.cream }} className="text-sm mb-2 opacity-80">You've completed the entire buffet!</p>
                 {finalTime && <p style={{ color: colors.creamWarm }} className="text-lg mb-2">🍽️ You dined for {formatTime(finalTime)}</p>}
+
+                 <p style={{ color: colors.cream }} className="text-xs mb-4 opacity-70">New puzzles daily at 8 PM EST 🍽️</p>
                 <button onClick={() => setShowShareModal(true)} className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium" style={{ background: `linear-gradient(135deg, ${colors.copper} 0%, ${colors.copperDark} 100%)`, color: colors.cream }}>
                   <Share2 size={16} /> Share Results
                 </button>
