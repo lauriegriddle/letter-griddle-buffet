@@ -973,7 +973,6 @@ export default function LetterGriddleBuffet() {
             <div className="p-4 rounded-xl mb-4 text-sm" style={{ background: `${colors.wine}60`, border: `1px solid ${colors.copper}40`, fontFamily: 'monospace' }}>
               <p style={{ color: colors.cream }} className="whitespace-pre-wrap">
 {`✨ Letter Griddle Buffet #1 🍽️
-Category: DESSERTS ✨
 🥄${'🍽️'.repeat(wordStates.flat().filter(w => w.completed).length)}
 ${wordStates.flat().filter(w => w.completed).length + (amuseBoucheState.completed ? 1 : 0)}/6 words solved!${finalTime ? `\nDined for ${formatTime(finalTime)}` : ''}
 Bravo! ✨`}
