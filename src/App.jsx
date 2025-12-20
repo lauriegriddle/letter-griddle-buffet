@@ -392,7 +392,7 @@ export default function LetterGriddleBuffet() {
     const solvedWords = solvedCourseWords + (amuseBoucheState.completed ? 1 : 0);
     const plateEmojis = '🥄' + '🍽️'.repeat(solvedCourseWords);
     const timeStr = finalTime ? `\nDined for ${formatTime(finalTime)}` : '';
-    const shareText = `✨ Letter Griddle Buffet #${gameData.puzzleNumber} 🍽️ ✨\n${plateEmojis}\n${solvedWords}/${totalWords} words solved!${timeStr}\nBravo! ✨\nNew puzzles daily at 8 PM EST\nPlay at www.lettergriddlebuffet.com`;
+    const shareText = `✨ Letter Griddle Buffet #${gameData.puzzleNumber} 🍽️ ✨\n${plateEmojis}\n${solvedWords}/${totalWords} words solved!\nBravo! ✨\nNew puzzles daily at 8 PM EST\nPlay at www.lettergriddlebuffet.com \nVisit lettergriddle.com for more games!`;
     navigator.clipboard.writeText(shareText).then(() => {
       setShareCopied(true);
       setTimeout(() => setShareCopied(false), 2000);
