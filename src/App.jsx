@@ -1011,7 +1011,7 @@ Bravo! ✨`}
             <div className="space-y-4" style={{ color: colors.cream }}>
               <div className="p-4 rounded-xl" style={{ background: `${colors.wine}50`, border: `1px solid ${colors.copper}30` }}>
                 <div className="flex items-center gap-3 mb-2"><span className="text-2xl">🥄</span><span className="font-medium" style={{ color: colors.copperLight }}>Amuse-Bouche</span></div>
-                <p className="text-sm opacity-90">Start with a small bite - a 3-letter word to whet your appetite.</p>
+                <p className="text-sm opacity-90">Start with a small bite, a 3-letter word to whet your appetite.</p>
               </div>
               <div className="p-4 rounded-xl" style={{ background: `${colors.wine}50`, border: `1px solid ${colors.copper}30` }}>
                 <div className="flex items-center gap-3 mb-2"><span className="text-2xl">🥗🍝🍰</span><span className="font-medium" style={{ color: colors.copperLight }}>Three Courses</span></div>
