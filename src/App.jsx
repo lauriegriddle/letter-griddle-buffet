@@ -386,18 +386,37 @@ export default function LetterGriddleBuffet() {
     });
   };
 
-  const handleShare = () => {
-    const totalWords = gameData.courses.reduce((acc, c) => acc + c.words.length, 0) + 1;
-    const solvedCourseWords = wordStates.flat().filter(w => w.completed).length;
-    const solvedWords = solvedCourseWords + (amuseBoucheState.completed ? 1 : 0);
-    const plateEmojis = '🥄' + '🍽️'.repeat(solvedCourseWords);
-    const timeStr = finalTime ? `\nDined for ${formatTime(finalTime)}` : '';
-    const shareText = `✨ Letter Griddle Buffet #${gameData.puzzleNumber} 🍽️ ✨\n${plateEmojis}\n${solvedWords}/${totalWords} words solved!\nBravo! ✨\nNew puzzles daily at 8 PM EST\nPlay at www.lettergriddlebuffet.com \nVisit lettergriddle.com for more games!`;
-    navigator.clipboard.writeText(shareText).then(() => {
-      setShareCopied(true);
-      setTimeout(() => setShareCopied(false), 2000);
-    });
-  };
+  const handleShare = async () => {
+  const totalWords = gameData.courses.reduce((acc, c) => acc + c.words.length, 0) + 1;
+  const solvedCourseWords = wordStates.flat().filter(w => w.completed).length;
+  const solvedWords = solvedCourseWords + (amuseBoucheState.completed ? 1 : 0);
+  const plateEmojis = '🥄' + '🍽️'.repeat(solvedCourseWords);
+  const shareText = `✨ Letter Griddle Buffet #${gameData.puzzleNumber} 🍽️ ✨\n${plateEmojis}\n${solvedWords}/${totalWords} words solved!\nwww.lettergriddlebuffet.com`;
+
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        text: shareText
+      });
+    } catch (err) {
+      if (err.name !== 'AbortError') {
+        copyToClipboard(shareText);
+      }
+    }
+  } else {
+    copyToClipboard(shareText);
+  }
+};
+
+const copyToClipboard = async (text) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    setShareCopied(true);
+    setTimeout(() => setShareCopied(false), 2000);
+  } catch (err) {
+    console.error('Failed to copy:', err);
+  }
+};
 
   // Keyboard handler
   const handleKeyDown = useCallback((e) => {
