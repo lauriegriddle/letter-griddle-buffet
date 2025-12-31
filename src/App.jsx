@@ -941,6 +941,7 @@ const copyToClipboard = async (text) => {
         )}
 
         <div className="mt-8 text-center">
+          <a href="https://lettergriddle.com" className="text-amber-400 hover:text-amber-300 transition-colors text-sm font-medium">🥞 Letter Griddle Games</a>
           <p style={{ color: colors.cream }} className="text-sm opacity-80">{!amuseBoucheComplete ? "🥄 Start with the amuse-bouche to begin your meal" : "🍽️ Complete each course to unlock the next"}</p>
         </div>
         <div className="mt-6 text-center text-xs" style={{ color: colors.cream, opacity: 0.6 }}>
