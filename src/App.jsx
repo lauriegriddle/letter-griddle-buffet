@@ -391,7 +391,7 @@ export default function LetterGriddleBuffet() {
   const solvedCourseWords = wordStates.flat().filter(w => w.completed).length;
   const solvedWords = solvedCourseWords + (amuseBoucheState.completed ? 1 : 0);
   const plateEmojis = '🥄' + '🍽️'.repeat(solvedCourseWords);
-  const shareText = `✨ Letter Griddle Buffet #${gameData.puzzleNumber} 🍽️ ✨\n${plateEmojis}\n${solvedWords}/${totalWords} words solved!\nwww.lettergriddlebuffet.com`;
+  const shareText = `✨ Letter Griddle Buffet #${gameData.puzzleNumber} 🍽️ ✨\n${plateEmojis}\n${solvedWords}/${totalWords} words solved!\nwww.lettergriddlebuffet.com\nFree & ad-free!\nPart of the Letter Griddle Games 🥞\nMore games: lettergriddle.com`;
 
   if (navigator.share) {
     try {
