@@ -421,22 +421,22 @@ const puzzles = [
       ]}
     ]
   },
-  // Puzzle 23 - COLORS
+  /// Puzzle 23 - COLORS
   {
     category: "COLORS",
     puzzleNumber: 23,
-    amuseBouche: { word: "RED", hint: "Color of fire trucks and roses", revealedIndex: 0 },
+    amuseBouche: { word: "RED", hint: "The color of fire trucks and stop signs", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
-        { word: "BLUE", hint: "Color of the sky and ocean", revealedIndex: 0 },
-        { word: "GREEN", hint: "Color of grass and leaves", revealedIndex: 2 },
+        { word: "BLUE", hint: "The color of a clear sky on a sunny day", revealedIndex: 0 },
+        { word: "BEIGE", hint: "A neutral sandy or tan shade often used in interior design", revealedIndex: 2 },
       ]},
       { name: "Main Course", emoji: "🍝", words: [
-        { word: "PURPLE", hint: "Mix of red and blue, color of royalty", revealedIndex: 3 },
-        { word: "ORANGE", hint: "Color named after a citrus fruit", revealedIndex: 0 },
+        { word: "INDIGO", hint: "A deep purple-blue color between blue and violet in the rainbow", revealedIndex: 3 },
+        { word: "EMERALD", hint: "A rich green color named after a precious gemstone", revealedIndex: 0 },
       ]},
       { name: "Dessert", emoji: "🧁", words: [
-        { word: "TURQUOISE", hint: "Blue-green color like tropical waters", revealedIndex: 5 }
+        { word: "BURGUNDY", hint: "A deep reddish-purple wine color named after a French region", revealedIndex: 5 }
       ]}
     ]
   },
