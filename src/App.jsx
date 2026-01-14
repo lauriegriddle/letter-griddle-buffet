@@ -1143,7 +1143,7 @@ Bravo! ✨`}
               <h2 className="text-2xl font-light" style={{ color: colors.cream, fontFamily: 'Georgia, serif' }}>Terms of Service</h2>
             </div>
             <div className="space-y-4 text-sm" style={{ color: colors.creamWarm }}>
-              <p><strong style={{ color: colors.copperLight }}>Last Updated:</strong> December 2025</p>
+              <p><strong style={{ color: colors.copperLight }}>Last Updated:</strong> January 14, 2026</p>
               
               <p>Welcome to Letter Griddle Buffet! By accessing or playing this game, you agree to be bound by these Terms of Service.</p>
               
