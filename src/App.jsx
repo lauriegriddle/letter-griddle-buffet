@@ -1097,7 +1097,7 @@ Bravo! ✨`}
               <h2 className="text-2xl font-light" style={{ color: colors.cream, fontFamily: 'Georgia, serif' }}>Privacy Policy</h2>
             </div>
             <div className="space-y-4 text-sm" style={{ color: colors.creamWarm }}>
-              <p><strong style={{ color: colors.copperLight }}>Last Updated:</strong> December 2025</p>
+              <p><strong style={{ color: colors.copperLight }}>Last Updated:</strong> January 14, 2026</p>
               
               <p>Letter Griddle Buffet ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you play our game.</p>
               
@@ -1152,6 +1152,9 @@ Bravo! ✨`}
               
               <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Intellectual Property</h3>
               <p>All content, design, graphics, and gameplay mechanics of Letter Griddle Buffet are owned by us and are protected by copyright and other intellectual property laws. You may not copy, modify, distribute, or create derivative works without our permission.</p>
+
+              <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Fictional Content</h3>
+              <p>Letter Griddle Buffet, including the Letter Griddle Cafe, the town of Griddle Falls, the Trivia Crew characters, and all related stories, vignettes, and recipes, is a work of fiction. All characters, locations, and events are products of the creator's imagination. Any resemblance to actual persons, living or dead, businesses, events, or locales is entirely coincidental.</p>
               
               <h3 className="text-lg font-medium pt-2" style={{ color: colors.copperLight }}>Game Progress</h3>
               <p>Game progress and statistics are stored locally on your device. We are not responsible for any loss of data due to clearing browser data, device changes, or technical issues.</p>
