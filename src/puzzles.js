@@ -307,9 +307,9 @@ const puzzles = [
       ]}
     ]
   },
-  // Puzzle 17 - SCHOOL DAYS
+  // Puzzle 17 - SCHOOL
   {
-    category: "SCHOOL DAYS",
+    category: "SCHOOL",
     puzzleNumber: 17,
     amuseBouche: { word: "GYM", hint: "Class for physical education and exercise", revealedIndex: 0 },
     courses: [
