@@ -820,9 +820,11 @@ export function getTodaysPuzzle() {
   }
   puzzleDate.setHours(20, 0, 0, 0);
   
-  // Calculate days since launch (Dec 17, 2025 at 8 PM EST)
-  const launchDate = new Date('2025-12-17T20:00:00-05:00');
-  const daysSinceLaunch = Math.floor((puzzleDate - launchDate) / (1000 * 60 * 60 * 24));
+  // Launch date: December 17, 2025 at 8 PM (when index 0 started)
+  const launchDate = new Date(2025, 11, 17, 20, 0, 0, 0); // Month is 0-indexed, so 11 = December
+  
+  // Calculate days since launch
+  const daysSinceLaunch = Math.round((puzzleDate - launchDate) / (1000 * 60 * 60 * 24));
   
   // Rotate through puzzles
   const puzzleIndex = ((daysSinceLaunch % puzzles.length) + puzzles.length) % puzzles.length;
