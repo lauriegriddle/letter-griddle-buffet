@@ -1,806 +1,579 @@
-// Letter Griddle Buffet - Fresh Daily Puzzles
-// 42 puzzles in rotation - ALL NEW WORDS including Amuse-Bouche
-// Puzzle changes at 8 PM EST daily
+// Letter Griddle Buffet - Puzzles
+// 26 puzzles in optimized rotation (no conflicts with Little Letter Griddle)
+// Launch Date: March 10, 2026 at 8 PM EST
 
 const puzzles = [
-  // Puzzle 1 - FRIENDSHIP
-  {
-    category: "FRIENDSHIP",
-    puzzleNumber: 1,
-    amuseBouche: { word: "BFF", hint: "Best friends forever, in texting shorthand", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "ALLY", hint: "Someone who stands by your side", revealedIndex: 0 },
-        { word: "CHUM", hint: "A close friend, especially from childhood", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "BESTIE", hint: "Your very best friend, in modern slang", revealedIndex: 3 },
-        { word: "KINDRED", hint: "People who share similar feelings or interests", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "CONFIDANT", hint: "A trusted friend you share secrets with", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 2 - ART
-  {
-    category: "ART",
-    puzzleNumber: 2,
-    amuseBouche: { word: "HUE", hint: "A shade or tint of color", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "CLAY", hint: "Moldable material shaped by hands", revealedIndex: 0 },
-        { word: "BRUSH", hint: "Tool with bristles used for painting", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "CANVAS", hint: "Fabric surface for painting masterpieces", revealedIndex: 3 },
-        { word: "PASTEL", hint: "Soft, chalky sticks of color", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "WATERCOLOR", hint: "Paint that flows and blends with water", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 3 - CANDY
-  {
-    category: "CANDY",
-    puzzleNumber: 3,
-    amuseBouche: { word: "PEZ", hint: "Candy dispensed from character heads", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "DROP", hint: "Small hard candy, like lemon or pear flavored", revealedIndex: 0 },
-        { word: "SWEET", hint: "Another word for candy, especially in Britain", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "TOFFEE", hint: "Buttery, crunchy candy made from sugar", revealedIndex: 3 },
-        { word: "CARAMEL", hint: "Smooth, golden candy made by heating sugar", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "BUTTERSCOTCH", hint: "Sweet, buttery brown sugar confection", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 4 - ALBUMS
-  {
-    category: "ALBUMS",
-    puzzleNumber: 4,
-    amuseBouche: { word: "HIT", hint: "A chart-topping popular song", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "SONG", hint: "An individual musical piece with lyrics", revealedIndex: 0 },
-        { word: "VINYL", hint: "Classic format making a comeback with collectors", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "STEREO", hint: "Sound system for playing your tunes", revealedIndex: 3 },
-        { word: "PLAYLIST", hint: "A curated collection of songs in order", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "STREAMING", hint: "How most people listen to music today", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 5 - FALL
-  {
-    category: "FALL",
-    puzzleNumber: 5,
-    amuseBouche: { word: "HAY", hint: "Dried grass in autumn bales", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "RAKE", hint: "Tool used to gather fallen leaves", revealedIndex: 0 },
-        { word: "CIDER", hint: "Warm apple drink perfect for fall", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "ACORNS", hint: "Nuts that fall from oak trees", revealedIndex: 3 },
-        { word: "FOLIAGE", hint: "The colorful leaves on trees in fall", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "SCARECROW", hint: "Stuffed figure standing guard in fields", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 6 - BROADWAY
-  {
-    category: "BROADWAY",
-    puzzleNumber: 6,
-    amuseBouche: { word: "ACT", hint: "One section of a stage play", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "RENT", hint: "Rock musical about artists in New York City", revealedIndex: 0 },
-        { word: "HAIR", hint: "1960s counterculture musical about the hippie movement", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "WICKED", hint: "Story of the witches of Oz before Dorothy arrived", revealedIndex: 3 },
-        { word: "PHANTOM", hint: "Masked figure haunting a Paris opera house", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "BRIGADOON", hint: "Magical Scottish village that appears once every century", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 7 - OUTERWEAR
-  {
-    category: "OUTERWEAR",
-    puzzleNumber: 7,
-    amuseBouche: { word: "FUR", hint: "Warm material lining winter coats", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "VEST", hint: "Sleeveless layer worn over a shirt", revealedIndex: 0 },
-        { word: "WRAP", hint: "Blanket-like covering draped over shoulders", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "PARKA", hint: "Heavy hooded jacket for cold weather", revealedIndex: 3 },
-        { word: "PONCHO", hint: "Pull-over garment, often waterproof", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "TURTLENECK", hint: "Sweater with a high folded collar", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 8 - HIKE (keeping MAP)
-  {
-    category: "HIKE",
-    puzzleNumber: 8,
-    amuseBouche: { word: "MAP", hint: "Paper guide showing trails and terrain", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "TREK", hint: "A long, challenging journey on foot", revealedIndex: 0 },
-        { word: "PATH", hint: "A walkway through woods or fields", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "RANGER", hint: "Park official who knows the trails", revealedIndex: 3 },
-        { word: "CANTEEN", hint: "Container for carrying water on the trail", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "WILDERNESS", hint: "Wild, untamed natural area to explore", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 9 - MUPPETS
-  {
-    category: "MUPPETS",
-    puzzleNumber: 9,
-    amuseBouche: { word: "PIG", hint: "Miss Piggy's species", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "GONZO", hint: "Blue weirdo known for daring stunts", revealedIndex: 0 },
-        { word: "PIGGY", hint: "Glamorous diva pig who loves Kermit", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "FOZZIE", hint: "Comedian bear who tells terrible jokes", revealedIndex: 3 },
-        { word: "SCOOTER", hint: "Young gofer who works backstage", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "SWEETUMS", hint: "Giant, lovable monster with lots of fur", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 10 - HANDBAG
-  {
-    category: "HANDBAG",
-    puzzleNumber: 10,
-    amuseBouche: { word: "PEN", hint: "Writing tool tucked in a pocket", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "COMB", hint: "Tool for tidying your hair on the go", revealedIndex: 0 },
-        { word: "COINS", hint: "Loose change jingling at the bottom", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "MIRROR", hint: "Small reflective item for quick touch-ups", revealedIndex: 3 },
-        { word: "RECEIPT", hint: "Paper proof of purchase, often crumpled", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "SUNGLASSES", hint: "Eye protection tucked away for sunny days", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 11 - FOOTBALL
-  {
-    category: "FOOTBALL",
-    puzzleNumber: 11,
-    amuseBouche: { word: "END", hint: "Zone where touchdowns are scored", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "PUNT", hint: "Kicking the ball away to the other team", revealedIndex: 0 },
-        { word: "SNAP", hint: "When the center hikes the ball", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "FUMBLE", hint: "Accidentally dropping the ball during play", revealedIndex: 3 },
-        { word: "KICKOFF", hint: "How each half of the game begins", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "GRIDIRON", hint: "Nickname for the football field", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 12 - FRUITS
-  {
-    category: "FRUITS",
-    puzzleNumber: 12,
-    amuseBouche: { word: "DATE", hint: "Sweet, wrinkly fruit from palm trees", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "KIWI", hint: "Fuzzy brown fruit with green flesh inside", revealedIndex: 0 },
-        { word: "PLUM", hint: "Small, round stone fruit with purple skin", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "CHERRY", hint: "Small red fruit often on top of sundaes", revealedIndex: 3 },
-        { word: "PAPAYA", hint: "Tropical fruit with orange flesh and black seeds", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "TANGERINE", hint: "Small, sweet citrus that's easy to peel", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 13 - BOOKSHOP
-  {
-    category: "BOOKSHOP",
-    puzzleNumber: 13,
-    amuseBouche: { word: "ROW", hint: "A line of books on a shelf", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "NOOK", hint: "A cozy corner for reading", revealedIndex: 0 },
-        { word: "SHELF", hint: "Where books stand in a row waiting to be chosen", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "BROWSE", hint: "To look through books without a plan", revealedIndex: 3 },
-        { word: "FICTION", hint: "Made-up stories from an author's imagination", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "HARDCOVER", hint: "Book with a sturdy, rigid binding", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 14 - CUISINE
-  {
-    category: "CUISINE",
-    puzzleNumber: 14,
-    amuseBouche: { word: "WOK", hint: "Round-bottomed pan for stir-fry", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "GYRO", hint: "Greek sandwich with meat on pita bread", revealedIndex: 0 },
-        { word: "CURRY", hint: "Spiced dish popular in Indian cooking", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "RAMEN", hint: "Japanese noodle soup with rich broth", revealedIndex: 3 },
-        { word: "FALAFEL", hint: "Fried chickpea balls served in pita", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "SCHNITZEL", hint: "Breaded and fried cutlet from Austria", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 15 - MYSTERY
-  {
-    category: "MYSTERY",
-    puzzleNumber: 15,
-    amuseBouche: { word: "RED", hint: "Herring that misleads investigators", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "CASE", hint: "An investigation to be solved", revealedIndex: 0 },
-        { word: "CLOAK", hint: "What secretive figures wear to hide", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "CIPHER", hint: "A secret code to be cracked", revealedIndex: 3 },
-        { word: "WITNESS", hint: "Someone who saw what happened", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "WHODUNIT", hint: "A story focused on solving a crime", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 16 - SCHOOL
-  {
-    category: "SCHOOL",
-    puzzleNumber: 16,
-    amuseBouche: { word: "PEN", hint: "Writing tool in every student's bag", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "BELL", hint: "Sound that signals class changes", revealedIndex: 0 },
-        { word: "TEST", hint: "Assessment of what you've learned", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "LOCKER", hint: "Metal storage space in the hallway", revealedIndex: 3 },
-        { word: "ERASER", hint: "Tool for fixing pencil mistakes", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "CLASSROOM", hint: "Room where students learn together", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 17 - GAMES
-  {
-    category: "GAMES",
-    puzzleNumber: 17,
-    amuseBouche: { word: "WIN", hint: "The goal of every player", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "TURN", hint: "Your chance to play next", revealedIndex: 0 },
-        { word: "CARDS", hint: "Deck of 52 used for many games", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "PLAYER", hint: "Someone participating in the game", revealedIndex: 3 },
-        { word: "SPINNER", hint: "Arrow that whirls to determine moves", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "HOPSCOTCH", hint: "Sidewalk game with numbered squares", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 18 - MOVIES
-  {
-    category: "MOVIES",
-    puzzleNumber: 18,
-    amuseBouche: { word: "ACT", hint: "To perform in front of the camera", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "CAST", hint: "All the actors in a film", revealedIndex: 0 },
-        { word: "SCENE", hint: "A single continuous shot in a movie", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "SEQUEL", hint: "A follow-up film continuing the story", revealedIndex: 3 },
-        { word: "TRAILER", hint: "Preview that shows exciting clips", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "PROJECTOR", hint: "Machine that displays film on a screen", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 19 - DESSERTS
-  {
-    category: "DESSERTS",
-    puzzleNumber: 19,
-    amuseBouche: { word: "JAM", hint: "Fruity filling for pastries", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "CAKE", hint: "Layered treat often served at birthdays", revealedIndex: 0 },
-        { word: "CRISP", hint: "Baked fruit dessert with crumbly topping", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "GELATO", hint: "Italian ice cream, denser and creamier", revealedIndex: 3 },
-        { word: "MOUSSE", hint: "Light, airy chocolate dessert", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "TIRAMISU", hint: "Italian dessert with coffee-soaked ladyfingers", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 20 - CITIES
-  {
-    category: "CITIES",
-    puzzleNumber: 20,
-    amuseBouche: { word: "NYC", hint: "Big Apple's abbreviation", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "PARIS", hint: "French capital known for the Eiffel Tower", revealedIndex: 0 },
-        { word: "CAIRO", hint: "Egyptian city near the pyramids", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "DUBLIN", hint: "Irish capital famous for pubs and culture", revealedIndex: 3 },
-        { word: "VIENNA", hint: "Austrian city known for music and pastries", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "SINGAPORE", hint: "Island city-state in Southeast Asia", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 21 - SPORTS
-  {
-    category: "SPORTS",
-    puzzleNumber: 21,
-    amuseBouche: { word: "BAT", hint: "Wooden stick for hitting baseballs", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "SWIM", hint: "Racing through water in a pool or lake", revealedIndex: 0 },
-        { word: "POLO", hint: "Sport played on horseback with mallets", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "HOCKEY", hint: "Fast ice sport with pucks and sticks", revealedIndex: 3 },
-        { word: "BOXING", hint: "Combat sport with gloves in a ring", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "BADMINTON", hint: "Racket sport with a feathered shuttlecock", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 22 - COLORS
-  {
-    category: "COLORS",
-    puzzleNumber: 22,
-    amuseBouche: { word: "TAN", hint: "Sun-kissed skin tone", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "PINK", hint: "Soft color of cherry blossoms and flamingos", revealedIndex: 0 },
-        { word: "GOLD", hint: "Metallic color of treasure and sunsets", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "VIOLET", hint: "Deep purple color like the flower", revealedIndex: 3 },
-        { word: "SILVER", hint: "Shiny metallic color of moonlight", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "MAGENTA", hint: "Vivid purplish-red color", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 23 - PARLOR
-  {
-    category: "PARLOR",
-    puzzleNumber: 23,
-    amuseBouche: { word: "ACE", hint: "Highest card in many games", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "BINGO", hint: "Game where you mark numbers on a card", revealedIndex: 0 },
-        { word: "RUMMY", hint: "Card game where you collect matching sets and runs", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "DOMINO", hint: "Rectangular tiles with dots matched end to end", revealedIndex: 3 },
-        { word: "YAHTZEE", hint: "Dice game trying to roll five of a kind", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "PICTIONARY", hint: "Drawing game where teammates guess the word", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 24 - GAMING
-  {
-    category: "GAMING",
-    puzzleNumber: 24,
-    amuseBouche: { word: "NES", hint: "Classic Nintendo console from the 80s", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "SEGA", hint: "Company behind Sonic the Hedgehog", revealedIndex: 0 },
-        { word: "MARIO", hint: "Famous plumber who rescues Princess Peach", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "TETRIS", hint: "Puzzle game fitting falling blocks together", revealedIndex: 3 },
-        { word: "ZELDA", hint: "Princess in Nintendo's legendary adventure series", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "MINECRAFT", hint: "Block-building sandbox game for creators", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 25 - FIRESIDE
-  {
-    category: "FIRESIDE",
-    puzzleNumber: 25,
-    amuseBouche: { word: "ASH", hint: "Gray remains after the fire burns out", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "GLOW", hint: "Soft light radiating from the flames", revealedIndex: 0 },
-        { word: "TONGS", hint: "Metal tool for gripping and moving hot logs", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "HEARTH", hint: "The floor area in front of a fireplace", revealedIndex: 3 },
-        { word: "KINDLE", hint: "To start a fire burning", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "CHESTNUTS", hint: "Nuts famously roasted by an open fire", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 26 - GAMESHOW
-  {
-    category: "GAMESHOW",
-    puzzleNumber: 26,
-    amuseBouche: { word: "BID", hint: "Guess the price on a famous show", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "HOST", hint: "The person who runs the show", revealedIndex: 0 },
-        { word: "WHEEL", hint: "Spinning circle of prizes on a famous show", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "BUZZER", hint: "What you hit to answer first", revealedIndex: 3 },
-        { word: "PODIUM", hint: "Stand where contestants wait their turn", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "JEOPARDY", hint: "Quiz show where answers come as questions", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 27 - FLYING
-  {
-    category: "FLYING",
-    puzzleNumber: 27,
-    amuseBouche: { word: "AIR", hint: "What fills the sky above us", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "WING", hint: "The part that lifts a plane into the sky", revealedIndex: 0 },
-        { word: "LAND", hint: "To bring an aircraft safely down", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "ASCEND", hint: "To climb higher into the sky", revealedIndex: 3 },
-        { word: "ALTITUDE", hint: "How high above the ground you are", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "TURBULENCE", hint: "Bumpy air that shakes the plane", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 28 - TRAVEL
-  {
-    category: "TRAVEL",
-    puzzleNumber: 28,
-    amuseBouche: { word: "BAG", hint: "What you pack for a trip", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "TRIP", hint: "A journey from one place to another", revealedIndex: 0 },
-        { word: "GATE", hint: "Where you wait to board your plane", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "TICKET", hint: "Paper or digital proof of your booking", revealedIndex: 3 },
-        { word: "LUGGAGE", hint: "Bags and suitcases you bring along", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "DEPARTURE", hint: "When your flight leaves the airport", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 29 - CHEESE (keeping AGE)
-  {
-    category: "CHEESE",
-    puzzleNumber: 29,
-    amuseBouche: { word: "AGE", hint: "Process that develops flavor in fine cheeses", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "GOAT", hint: "Animal whose milk makes tangy cheese", revealedIndex: 0 },
-        { word: "BLEU", hint: "French spelling for a moldy, pungent variety", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "FONDUE", hint: "Melted cheese dish for dipping bread", revealedIndex: 3 },
-        { word: "GRUYERE", hint: "Nutty Swiss cheese perfect for melting", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "PARMESAN", hint: "Hard Italian cheese grated over pasta", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 30 - LUNCH
-  {
-    category: "LUNCH",
-    puzzleNumber: 30,
-    amuseBouche: { word: "SUB", hint: "Long sandwich on a hoagie roll", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "WRAP", hint: "Fillings rolled up in a soft tortilla", revealedIndex: 0 },
-        { word: "CHIPS", hint: "Crunchy snack often served alongside a sandwich", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "PANINI", hint: "Pressed and grilled Italian sandwich", revealedIndex: 3 },
-        { word: "THERMOS", hint: "Insulated container keeping soup warm", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "LUNCHBOX", hint: "Container for carrying your midday meal", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 31 - SPICES
-  {
-    category: "SPICES",
-    puzzleNumber: 31,
-    amuseBouche: { word: "RUB", hint: "Spice blend massaged onto meat", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "SAGE", hint: "Earthy herb often used in stuffing", revealedIndex: 0 },
-        { word: "CLOVE", hint: "Aromatic spice used in holiday baking", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "GINGER", hint: "Spicy root used in cookies and stir-fry", revealedIndex: 3 },
-        { word: "CUMIN", hint: "Warm, earthy spice essential in chili", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "CORIANDER", hint: "Seed spice with citrusy notes, also called cilantro", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 32 - KITCHEN
-  {
-    category: "KITCHEN",
-    puzzleNumber: 32,
-    amuseBouche: { word: "PAN", hint: "Flat cookware for frying", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "OVEN", hint: "Appliance for baking and roasting", revealedIndex: 0 },
-        { word: "WHISK", hint: "Wire tool for beating eggs and cream", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "PANTRY", hint: "Storage area for dry goods and cans", revealedIndex: 3 },
-        { word: "SPATULA", hint: "Flat tool for flipping pancakes", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "MICROWAVE", hint: "Appliance for quick reheating", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 33 - PANCAKES
-  {
-    category: "PANCAKES",
-    puzzleNumber: 33,
-    amuseBouche: { word: "PAT", hint: "A small portion of butter", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "FLAT", hint: "The shape of each cake on the griddle", revealedIndex: 0 },
-        { word: "STACK", hint: "How pancakes are served, one atop another", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "BUTTER", hint: "Melty topping that pools in the middle", revealedIndex: 3 },
-        { word: "BATTER", hint: "Pourable mixture before it hits the pan", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "BLUEBERRY", hint: "Popular fruit folded into the batter", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 34 - SOUP
-  {
-    category: "SOUP",
-    puzzleNumber: 34,
-    amuseBouche: { word: "CUP", hint: "Small serving size, not a bowl", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "STEW", hint: "Thick, hearty dish with chunks of meat and veggies", revealedIndex: 0 },
-        { word: "LADLE", hint: "Deep spoon for serving from a pot", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "SIMMER", hint: "To cook gently just below boiling", revealedIndex: 3 },
-        { word: "MINESTRONE", hint: "Italian vegetable soup with pasta and beans", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "GAZPACHO", hint: "Cold Spanish soup made from tomatoes", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 35 - PASTA
-  {
-    category: "PASTA",
-    puzzleNumber: 35,
-    amuseBouche: { word: "OIL", hint: "Drizzled to keep noodles from sticking", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "ORZO", hint: "Tiny rice-shaped pasta for soups and salads", revealedIndex: 0 },
-        { word: "ANGEL", hint: "Hair-thin delicate pasta strands", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "ROTINI", hint: "Corkscrew-shaped pasta that holds sauce well", revealedIndex: 3 },
-        { word: "LASAGNA", hint: "Wide, flat noodles layered in a baked dish", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "FETTUCCINE", hint: "Long, flat ribbons often served with Alfredo", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 36 - BREAKFAST
-  {
-    category: "BREAKFAST",
-    puzzleNumber: 36,
-    amuseBouche: { word: "OAT", hint: "Grain in morning porridge", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "HASH", hint: "Diced potatoes fried crispy on the griddle", revealedIndex: 0 },
-        { word: "TOAST", hint: "Bread browned and ready for butter", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "WAFFLE", hint: "Grid-patterned treat made in a special iron", revealedIndex: 3 },
-        { word: "OMELET", hint: "Folded eggs filled with cheese and veggies", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "CROISSANT", hint: "Flaky, buttery French pastry", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 37 - COOKING
-  {
-    category: "COOKING",
-    puzzleNumber: 37,
-    amuseBouche: { word: "OIL", hint: "Liquid fat for sautéing", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "DICE", hint: "To cut food into small cubes", revealedIndex: 0 },
-        { word: "BASTE", hint: "To spoon juices over meat while roasting", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "SAUTÉ", hint: "To cook quickly in a little oil over high heat", revealedIndex: 3 },
-        { word: "BRAISE", hint: "To cook slowly in liquid for tender results", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "MARINATE", hint: "To soak food in flavorful liquid before cooking", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 38 - POTLUCK
-  {
-    category: "POTLUCK",
-    puzzleNumber: 38,
-    amuseBouche: { word: "POT", hint: "What each guest brings a dish in", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "DISH", hint: "A prepared food item brought to share", revealedIndex: 0 },
-        { word: "GUEST", hint: "Someone invited to the gathering", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "SPREAD", hint: "An impressive array of food choices", revealedIndex: 3 },
-        { word: "SERVING", hint: "A portion placed on your plate", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "CASSEROLE", hint: "Baked dish often brought to gatherings", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 39 - BRUNCH
-  {
-    category: "BRUNCH",
-    puzzleNumber: 39,
-    amuseBouche: { word: "TEA", hint: "Hot beverage served with scones", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "EGGS", hint: "Morning staple, scrambled or poached", revealedIndex: 0 },
-        { word: "LATTE", hint: "Espresso with steamed milk", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "MIMOSA", hint: "Champagne and orange juice cocktail", revealedIndex: 3 },
-        { word: "FRITTATA", hint: "Italian baked egg dish like an open omelet", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "BENEDICTS", hint: "Eggs on muffins with hollandaise sauce", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 40 - DINNER
-  {
-    category: "DINNER",
-    puzzleNumber: 40,
-    amuseBouche: { word: "SIT", hint: "What you do at the table", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "MEAL", hint: "Food prepared and served at the table", revealedIndex: 0 },
-        { word: "WINE", hint: "Fermented grape drink often paired with dinner", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "CANDLE", hint: "Flickering light for a romantic table setting", revealedIndex: 3 },
-        { word: "ENTREE", hint: "The main dish of the evening", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "RESERVATIONS", hint: "Booking a table at a restaurant in advance", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 41 - CEREAL
-  {
-    category: "CEREAL",
-    puzzleNumber: 41,
-    amuseBouche: { word: "OAT", hint: "Grain in Cheerios", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "CORN", hint: "Golden grain that becomes flakes", revealedIndex: 0 },
-        { word: "BRAN", hint: "Fiber-rich outer layer of grain", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "FLAKES", hint: "Thin, crispy pieces floating in your bowl", revealedIndex: 3 },
-        { word: "CRUNCH", hint: "The satisfying sound of each bite", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "BREAKFAST", hint: "The meal when most cereal is enjoyed", revealedIndex: 5 }
-      ]}
-    ]
-  },
-  // Puzzle 42 - WATER
+  // =============================================
+  // Puzzle 1 - WATER (Mar 10)
+  // =============================================
   {
     category: "WATER",
-    puzzleNumber: 42,
+    puzzleNumber: 1,
     amuseBouche: { word: "ICE", hint: "Frozen form of water", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
-        { word: "RAIN", hint: "Drops falling from clouds above", revealedIndex: 0 },
-        { word: "POND", hint: "Small body of still water", revealedIndex: 2 },
+        { word: "FLOW", hint: "To move steadily and continuously in a current", revealedIndex: 0 },
+        { word: "VAPOR", hint: "Water in its gaseous form, like steam or mist", revealedIndex: 2 },
       ]},
       { name: "Main Course", emoji: "🍝", words: [
-        { word: "SPLASH", hint: "The sound and spray when you jump in", revealedIndex: 3 },
-        { word: "PUDDLE", hint: "Small pool left after a rainstorm", revealedIndex: 0 },
+        { word: "STREAM", hint: "A small, narrow river flowing through the land", revealedIndex: 3 },
+        { word: "REFRESH", hint: "To restore energy or make something feel new again", revealedIndex: 0 },
       ]},
       { name: "Dessert", emoji: "🧁", words: [
-        { word: "WATERFALL", hint: "Cascading water plunging over a cliff", revealedIndex: 5 }
+        { word: "RESERVOIR", hint: "A large natural or artificial lake used as a water supply", revealedIndex: 4 }
       ]}
     ]
-  }
+  },
+
+  // =============================================
+  // Puzzle 2 - FROGURT (Mar 11)
+  // =============================================
+  {
+    category: "FROGURT",
+    puzzleNumber: 2,
+    amuseBouche: { word: "CUP", hint: "Container for your frozen treat", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "TART", hint: "Having a sharp, tangy taste", revealedIndex: 0 },
+        { word: "FRUIT", hint: "A popular topping like strawberries or mango", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "FLAVOR", hint: "The distinctive taste of a food", revealedIndex: 3 },
+        { word: "REFRESH", hint: "To cool down or revive", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "TOPPINGS", hint: "Extras added on top like sprinkles or nuts", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 3 - OPERA (Mar 12)
+  // =============================================
+  {
+    category: "OPERA",
+    puzzleNumber: 3,
+    amuseBouche: { word: "ACT", hint: "A division of a theatrical performance", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "ARIA", hint: "A solo song performed by a single voice", revealedIndex: 0 },
+        { word: "TENOR", hint: "A high adult male singing voice", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CHORUS", hint: "A group of singers performing together", revealedIndex: 3 },
+        { word: "SOPRANO", hint: "The highest female singing voice", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "BARITONE", hint: "A male voice between tenor and bass", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 4 - RADIO (Mar 13)
+  // =============================================
+  {
+    category: "RADIO",
+    puzzleNumber: 4,
+    amuseBouche: { word: "AIR", hint: "Where radio waves travel", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "WAVE", hint: "An electromagnetic signal that carries sound", revealedIndex: 0 },
+        { word: "TUNER", hint: "A device that selects a specific frequency", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SIGNAL", hint: "A transmitted broadcast picked up by receivers", revealedIndex: 3 },
+        { word: "ANTENNA", hint: "A metal rod or dish that picks up transmissions", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "RECEIVER", hint: "A device that captures and plays broadcasts", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 5 - COMPLIMENTS (Mar 14)
+  // =============================================
+  {
+    category: "COMPLIMENTS",
+    puzzleNumber: 5,
+    amuseBouche: { word: "AWE", hint: "A feeling of wonder and admiration", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "WISH", hint: "A hope or desire for someone's happiness", revealedIndex: 0 },
+        { word: "BOOST", hint: "To lift up or increase confidence", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "MORALE", hint: "The spirit or confidence of a person or group", revealedIndex: 3 },
+        { word: "GENUINE", hint: "Sincere and authentic, not fake", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "POSITIVE", hint: "Optimistic and encouraging", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 6 - CHEESE DOODLES (Mar 15)
+  // =============================================
+  {
+    category: "CHEESE DOODLES",
+    puzzleNumber: 6,
+    amuseBouche: { word: "POP", hint: "Sound of a bag opening", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "NEON", hint: "A bright, fluorescent color like orange", revealedIndex: 0 },
+        { word: "SNACK", hint: "A small portion of food eaten between meals", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "POWDER", hint: "A fine, dusty coating left on fingers", revealedIndex: 3 },
+        { word: "CHEDDAR", hint: "A type of cheese used for flavoring", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CORNMEAL", hint: "Ground corn used as the base ingredient", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 7 - CHEESECAKE (Mar 16)
+  // =============================================
+  {
+    category: "CHEESECAKE",
+    puzzleNumber: 7,
+    amuseBouche: { word: "PAN", hint: "Baking vessel with removable bottom", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SOUR", hint: "A type of cream used to add tanginess", revealedIndex: 0 },
+        { word: "CRUST", hint: "The graham cracker base of the dessert", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CREAMY", hint: "Smooth and rich in texture", revealedIndex: 3 },
+        { word: "CUSTARD", hint: "A thick, creamy mixture of eggs and cream", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "HEAVENLY", hint: "Delightfully delicious, like paradise", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 8 - WINDOW (Mar 17)
+  // =============================================
+  {
+    category: "WINDOW",
+    puzzleNumber: 8,
+    amuseBouche: { word: "FRY", hint: "Cooking method for fast food favorites", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SODA", hint: "A fizzy carbonated beverage", revealedIndex: 0 },
+        { word: "SHAKE", hint: "A thick, blended ice cream drink", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "BURGER", hint: "A sandwich with a ground beef patty", revealedIndex: 3 },
+        { word: "KETCHUP", hint: "A tomato-based condiment for fries", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "PICKLES", hint: "Tangy cucumber slices on a sandwich", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 9 - STICKY BUN (Mar 18)
+  // =============================================
+  {
+    category: "STICKY BUN",
+    puzzleNumber: 9,
+    amuseBouche: { word: "YUM", hint: "Expression of deliciousness", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "NUTS", hint: "Crunchy toppings like pecans or walnuts", revealedIndex: 0 },
+        { word: "GOOEY", hint: "Soft, sticky, and deliciously messy", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SPIRAL", hint: "A coiled or rolled shape", revealedIndex: 3 },
+        { word: "CARAMEL", hint: "A sweet, buttery topping made from sugar", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "INVERTED", hint: "Flipped upside down when served", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 10 - BROWN BAG (Mar 19)
+  // =============================================
+  {
+    category: "BROWN BAG",
+    puzzleNumber: 10,
+    amuseBouche: { word: "EAT", hint: "What you do with your packed lunch", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "PREP", hint: "To prepare food in advance", revealedIndex: 0 },
+        { word: "LUNCH", hint: "A midday meal", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "NAPKIN", hint: "A cloth or paper for wiping hands and face", revealedIndex: 3 },
+        { word: "THERMOS", hint: "An insulated container to keep drinks hot or cold", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CONTENTS", hint: "What's inside the bag", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 11 - BREAD (Mar 20)
+  // =============================================
+  {
+    category: "BREAD",
+    puzzleNumber: 11,
+    amuseBouche: { word: "RYE", hint: "A hearty grain used in bread", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "RISE", hint: "What dough does when yeast activates", revealedIndex: 0 },
+        { word: "CRUST", hint: "The golden outer layer of a baked loaf", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CRUMBY", hint: "Full of small dry pieces that break off", revealedIndex: 3 },
+        { word: "BUTTERY", hint: "Rich and smooth like melted spread", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SANDWICH", hint: "Two slices with fillings in between", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 12 - BEVERAGE (Mar 21)
+  // =============================================
+  {
+    category: "BEVERAGE",
+    puzzleNumber: 12,
+    amuseBouche: { word: "SIP", hint: "To drink in small amounts", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SODA", hint: "A carbonated sweet drink, also called pop", revealedIndex: 0 },
+        { word: "FIZZY", hint: "Bubbly and effervescent, full of tiny bubbles", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "COFFEE", hint: "A caffeinated drink brewed from roasted beans", revealedIndex: 3 },
+        { word: "REFRESH", hint: "To restore energy or make something feel new again", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "MILKSHAKE", hint: "A thick, creamy drink blended with ice cream", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 13 - ON THE TABLE (Mar 22)
+  // =============================================
+  {
+    category: "ON THE TABLE",
+    puzzleNumber: 13,
+    amuseBouche: { word: "SET", hint: "To arrange dishes for a meal", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "BOWL", hint: "A deep, rounded dish for soup or cereal", revealedIndex: 0 },
+        { word: "PLATE", hint: "A flat dish for serving a main course", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SAUCER", hint: "A small shallow dish that goes under a cup", revealedIndex: 3 },
+        { word: "PLATTER", hint: "A large serving dish for meats or appetizers", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "PLACEMAT", hint: "A protective mat placed under a table setting", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 14 - FROZEN (Mar 23)
+  // =============================================
+  {
+    category: "FROZEN",
+    puzzleNumber: 14,
+    amuseBouche: { word: "BRR", hint: "Sound of shivering from cold", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "COLD", hint: "Having a low temperature", revealedIndex: 0 },
+        { word: "POLAR", hint: "Relating to the icy regions near the North or South Pole", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "ARCTIC", hint: "The frigid region surrounding the North Pole", revealedIndex: 3 },
+        { word: "BITING", hint: "Describes a sharp, piercing chill in the air", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "FREEZING", hint: "Extremely cold, at or below 32 degrees Fahrenheit", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 15 - GUITAR (Mar 24)
+  // =============================================
+  {
+    category: "GUITAR",
+    puzzleNumber: 15,
+    amuseBouche: { word: "AMP", hint: "Device that makes the sound louder", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "PICK", hint: "A small flat tool used to pluck strings", revealedIndex: 0 },
+        { word: "STRUM", hint: "To brush fingers across strings to make chords", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "STRING", hint: "A thin cord stretched across the instrument to produce sound", revealedIndex: 3 },
+        { word: "AMPLIFY", hint: "To increase the volume of sound electronically", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "ACOUSTIC", hint: "A type that produces sound naturally without electronics", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 16 - MOUNTAINS (Mar 25)
+  // =============================================
+  {
+    category: "MOUNTAINS",
+    puzzleNumber: 16,
+    amuseBouche: { word: "SKI", hint: "Winter sport on snowy slopes", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "HILL", hint: "A small, rounded elevation of land, lower than a mountain", revealedIndex: 0 },
+        { word: "RANGE", hint: "A chain of mountains connected in a line", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "RIDGED", hint: "Having a long, narrow elevated crest or edge", revealedIndex: 3 },
+        { word: "VOLCANO", hint: "A mountain that can erupt with lava and ash", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "HILLSIDE", hint: "The sloping side of a hill or mountain", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 17 - WEATHER (Mar 26)
+  // =============================================
+  {
+    category: "WEATHER",
+    puzzleNumber: 17,
+    amuseBouche: { word: "FOG", hint: "A thick mist that reduces visibility", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "WIND", hint: "Moving air caused by differences in atmospheric pressure", revealedIndex: 0 },
+        { word: "CLOUD", hint: "A visible mass of water droplets floating in the sky", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "REPORT", hint: "A forecast telling you what conditions to expect", revealedIndex: 3 },
+        { word: "CLIMATE", hint: "The long-term pattern of weather in a region", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SUNSHINE", hint: "Bright, warm light from the sun on a clear day", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 18 - SKYGAZING (Mar 27)
+  // =============================================
+  {
+    category: "SKYGAZING",
+    puzzleNumber: 18,
+    amuseBouche: { word: "SKY", hint: "The expanse above us", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "STAR", hint: "A bright point of light in the night sky", revealedIndex: 0 },
+        { word: "CLOUD", hint: "A white or gray mass floating in the sky", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SUNSET", hint: "When the sun dips below the horizon in the evening", revealedIndex: 3 },
+        { word: "MOONLIT", hint: "Illuminated by the glow of the moon", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "DARKNESS", hint: "The absence of light in the night sky", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 19 - PIE (Mar 28)
+  // =============================================
+  {
+    category: "PIE",
+    puzzleNumber: 19,
+    amuseBouche: { word: "TIN", hint: "Metal pan for baking", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "ROLL", hint: "To flatten dough with a cylindrical tool", revealedIndex: 0 },
+        { word: "FRUIT", hint: "A sweet filling made from apples, berries, or cherries", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "PASTRY", hint: "A baked dough used for crusts and shells", revealedIndex: 3 },
+        { word: "FILLING", hint: "The sweet or savory mixture inside a crust", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "MERINGUE", hint: "A fluffy topping made from whipped egg whites and sugar", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 20 - SNACKING (Mar 29)
+  // =============================================
+  {
+    category: "SNACKING",
+    puzzleNumber: 20,
+    amuseBouche: { word: "DIP", hint: "A sauce for dunking chips", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "NOSH", hint: "To eat snacks or light bites between meals", revealedIndex: 0 },
+        { word: "GRAZE", hint: "To eat small amounts throughout the day", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "MORSEL", hint: "A small piece or bite of food", revealedIndex: 3 },
+        { word: "MUNCHIE", hint: "A craving for something to snack on", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "NIBBLING", hint: "Eating in small, delicate bites", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 21 - CHOCOLATE (Mar 30)
+  // =============================================
+  {
+    category: "CHOCOLATE",
+    puzzleNumber: 21,
+    amuseBouche: { word: "BAR", hint: "A rectangular block of candy", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "DARK", hint: "A rich, intense variety with less sugar", revealedIndex: 0 },
+        { word: "FUDGE", hint: "A soft, dense confection often made with cocoa", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "FLAVOR", hint: "The distinctive taste of a food or drink", revealedIndex: 3 },
+        { word: "VELVETY", hint: "Smooth and rich in texture", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "DECADENT", hint: "Luxuriously rich and indulgent", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 22 - TEA (Mar 31)
+  // =============================================
+  {
+    category: "TEA",
+    puzzleNumber: 22,
+    amuseBouche: { word: "CUP", hint: "Vessel for your hot drink", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "BREW", hint: "To prepare by soaking in hot water", revealedIndex: 0 },
+        { word: "STEEP", hint: "To soak leaves in hot water to extract flavor", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "KETTLE", hint: "A container used to boil water", revealedIndex: 3 },
+        { word: "INFUSER", hint: "A device that holds loose leaves while they soak", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "STRAINER", hint: "A tool used to filter out leaves from the liquid", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 23 - CRAFTING (Apr 1)
+  // =============================================
+  {
+    category: "CRAFTING",
+    puzzleNumber: 23,
+    amuseBouche: { word: "SEW", hint: "To join fabric with needle and thread", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "ARTS", hint: "Creative activities involving skill and imagination", revealedIndex: 0 },
+        { word: "HOBBY", hint: "A leisure activity done for enjoyment", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CREATE", hint: "To make or bring something into existence", revealedIndex: 3 },
+        { word: "DESIGNS", hint: "Plans and makes something with purpose", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SKILLFUL", hint: "Having or showing expertise and ability", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 24 - TATER TOTS (Apr 2)
+  // =============================================
+  {
+    category: "TATER TOTS",
+    puzzleNumber: 24,
+    amuseBouche: { word: "OIL", hint: "Used for frying crispy treats", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "PUFF", hint: "To swell or expand with air", revealedIndex: 0 },
+        { word: "CRUST", hint: "A crispy outer layer formed when cooked", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "POTATO", hint: "The starchy vegetable these are made from", revealedIndex: 3 },
+        { word: "COMFORT", hint: "A type of food that brings warmth and satisfaction", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CYLINDER", hint: "The classic shape of these bite-sized treats", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 25 - FULL MOON (Apr 3)
+  // =============================================
+  {
+    category: "FULL MOON",
+    puzzleNumber: 25,
+    amuseBouche: { word: "ORB", hint: "A spherical celestial body", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "TIDE", hint: "The rise and fall of ocean water influenced by lunar gravity", revealedIndex: 0 },
+        { word: "LUNAR", hint: "Relating to the moon", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "APOLLO", hint: "NASA's program that landed humans on the moon", revealedIndex: 3 },
+        { word: "ECLIPSE", hint: "When Earth's shadow blocks sunlight from reaching the moon", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SATELLITE", hint: "A natural or artificial body orbiting a planet", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 26 - COFFEE BREAK (Apr 4)
+  // =============================================
+  {
+    category: "COFFEE BREAK",
+    puzzleNumber: 26,
+    amuseBouche: { word: "MUG", hint: "A sturdy cup for hot drinks", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "JAVA", hint: "Slang term for coffee", revealedIndex: 0 },
+        { word: "RELAX", hint: "To rest and unwind", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "PUZZLE", hint: "A brain game to enjoy during downtime", revealedIndex: 3 },
+        { word: "BREATHER", hint: "A short pause to catch your breath", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "AFTERNOON", hint: "The time of day when you might need a pick-me-up", revealedIndex: 4 }
+      ]}
+    ]
+  },
 ];
 
 // Function to get today's puzzle based on EST time
@@ -820,11 +593,9 @@ export function getTodaysPuzzle() {
   }
   puzzleDate.setHours(20, 0, 0, 0);
   
-  // Launch date: December 17, 2025 at 8 PM (when index 0 started)
-  const launchDate = new Date(2025, 11, 17, 20, 0, 0, 0); // Month is 0-indexed, so 11 = December
-  
-  // Calculate days since launch
-  const daysSinceLaunch = Math.round((puzzleDate - launchDate) / (1000 * 60 * 60 * 24));
+  // Calculate days since launch date (March 10, 2026 at 8 PM EST)
+  const launchDate = new Date('2026-03-10T20:00:00-05:00');
+  const daysSinceLaunch = Math.floor((puzzleDate - launchDate) / (1000 * 60 * 60 * 24));
   
   // Rotate through puzzles
   const puzzleIndex = ((daysSinceLaunch % puzzles.length) + puzzles.length) % puzzles.length;
