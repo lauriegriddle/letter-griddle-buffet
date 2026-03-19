@@ -161,7 +161,7 @@ const puzzles = [
   // Puzzle 8 - WINDOW (Mar 17)
   // =============================================
   {
-    category: "WINDOW",
+    category: "FAST FOOD",
     puzzleNumber: 8,
     amuseBouche: { word: "FRY", hint: "Cooking method for fast food favorites", revealedIndex: 0 },
     courses: [
