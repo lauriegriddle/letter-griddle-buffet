@@ -1,10 +1,11 @@
 // Letter Griddle Buffet - Puzzles
-// 26 puzzles in optimized rotation (no conflicts with Little Letter Griddle)
+// 42 puzzles in optimized rotation (no conflicts with Little Letter Griddle)
 // Launch Date: March 10, 2026 at 8 PM EST
+// Updated: April 4, 2026 - Added 16 new puzzles
 
 const puzzles = [
   // =============================================
-  // Puzzle 1 - WATER (Mar 10)
+  // Puzzle 1 - WATER
   // =============================================
   {
     category: "WATER",
@@ -26,7 +27,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 2 - FROGURT (Mar 11)
+  // Puzzle 2 - FROGURT
   // =============================================
   {
     category: "FROGURT",
@@ -48,7 +49,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 3 - OPERA (Mar 12)
+  // Puzzle 3 - OPERA
   // =============================================
   {
     category: "OPERA",
@@ -70,7 +71,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 4 - RADIO (Mar 13)
+  // Puzzle 4 - RADIO
   // =============================================
   {
     category: "RADIO",
@@ -92,7 +93,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 5 - COMPLIMENTS (Mar 14)
+  // Puzzle 5 - COMPLIMENTS
   // =============================================
   {
     category: "COMPLIMENTS",
@@ -114,7 +115,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 6 - CHEESE DOODLES (Mar 15)
+  // Puzzle 6 - CHEESE DOODLES
   // =============================================
   {
     category: "CHEESE DOODLES",
@@ -136,7 +137,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 7 - CHEESECAKE (Mar 16)
+  // Puzzle 7 - CHEESECAKE
   // =============================================
   {
     category: "CHEESECAKE",
@@ -158,10 +159,10 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 8 - WINDOW (Mar 17)
+  // Puzzle 8 - WINDOW
   // =============================================
   {
-    category: "FAST FOOD",
+    category: "WINDOW",
     puzzleNumber: 8,
     amuseBouche: { word: "FRY", hint: "Cooking method for fast food favorites", revealedIndex: 0 },
     courses: [
@@ -180,7 +181,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 9 - STICKY BUN (Mar 18)
+  // Puzzle 9 - STICKY BUN
   // =============================================
   {
     category: "STICKY BUN",
@@ -202,7 +203,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 10 - BROWN BAG (Mar 19)
+  // Puzzle 10 - BROWN BAG
   // =============================================
   {
     category: "BROWN BAG",
@@ -224,7 +225,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 11 - BREAD (Mar 20)
+  // Puzzle 11 - BREAD
   // =============================================
   {
     category: "BREAD",
@@ -246,7 +247,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 12 - BEVERAGE (Mar 21)
+  // Puzzle 12 - BEVERAGE
   // =============================================
   {
     category: "BEVERAGE",
@@ -268,7 +269,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 13 - ON THE TABLE (Mar 22)
+  // Puzzle 13 - ON THE TABLE
   // =============================================
   {
     category: "ON THE TABLE",
@@ -290,7 +291,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 14 - FROZEN (Mar 23)
+  // Puzzle 14 - FROZEN
   // =============================================
   {
     category: "FROZEN",
@@ -312,7 +313,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 15 - GUITAR (Mar 24)
+  // Puzzle 15 - GUITAR
   // =============================================
   {
     category: "GUITAR",
@@ -334,7 +335,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 16 - MOUNTAINS (Mar 25)
+  // Puzzle 16 - MOUNTAINS
   // =============================================
   {
     category: "MOUNTAINS",
@@ -356,7 +357,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 17 - WEATHER (Mar 26)
+  // Puzzle 17 - WEATHER
   // =============================================
   {
     category: "WEATHER",
@@ -378,7 +379,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 18 - SKYGAZING (Mar 27)
+  // Puzzle 18 - SKYGAZING
   // =============================================
   {
     category: "SKYGAZING",
@@ -400,7 +401,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 19 - PIE (Mar 28)
+  // Puzzle 19 - PIE
   // =============================================
   {
     category: "PIE",
@@ -422,7 +423,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 20 - SNACKING (Mar 29)
+  // Puzzle 20 - SNACKING
   // =============================================
   {
     category: "SNACKING",
@@ -444,7 +445,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 21 - CHOCOLATE (Mar 30)
+  // Puzzle 21 - CHOCOLATE
   // =============================================
   {
     category: "CHOCOLATE",
@@ -466,7 +467,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 22 - TEA (Mar 31)
+  // Puzzle 22 - TEA
   // =============================================
   {
     category: "TEA",
@@ -488,7 +489,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 23 - CRAFTING (Apr 1)
+  // Puzzle 23 - CRAFTING
   // =============================================
   {
     category: "CRAFTING",
@@ -510,7 +511,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 24 - TATER TOTS (Apr 2)
+  // Puzzle 24 - TATER TOTS
   // =============================================
   {
     category: "TATER TOTS",
@@ -532,7 +533,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 25 - FULL MOON (Apr 3)
+  // Puzzle 25 - FULL MOON
   // =============================================
   {
     category: "FULL MOON",
@@ -554,7 +555,7 @@ const puzzles = [
   },
 
   // =============================================
-  // Puzzle 26 - COFFEE BREAK (Apr 4)
+  // Puzzle 26 - COFFEE BREAK
   // =============================================
   {
     category: "COFFEE BREAK",
@@ -571,6 +572,319 @@ const puzzles = [
       ]},
       { name: "Dessert", emoji: "🧁", words: [
         { word: "AFTERNOON", hint: "The time of day when you might need a pick-me-up", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // NEW PUZZLES START HERE (Puzzles 27-42)
+  // Added April 4, 2026
+  // =============================================
+
+  // =============================================
+  // Puzzle 27 - VACATION
+  // =============================================
+  {
+    category: "VACATION",
+    puzzleNumber: 27,
+    amuseBouche: { word: "SPA", hint: "A relaxing wellness retreat", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "REST", hint: "Time to relax and recharge", revealedIndex: 0 },
+        { word: "BREAK", hint: "A pause from work or routine", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "LEAVE", hint: "Time off from your job", revealedIndex: 3 },
+        { word: "HOLIDAY", hint: "A special day or getaway", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "RELAXING", hint: "Calm and stress-free", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 28 - WAFFLE
+  // =============================================
+  {
+    category: "WAFFLE",
+    puzzleNumber: 28,
+    amuseBouche: { word: "YUM", hint: "Expression of deliciousness", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "IRON", hint: "The tool used to cook waffles", revealedIndex: 0 },
+        { word: "CRISP", hint: "Crunchy on the outside", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "GOLDEN", hint: "The perfect color when done", revealedIndex: 3 },
+        { word: "BELGIAN", hint: "A style known for deep pockets", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "TOPPINGS", hint: "Fruit, syrup, or whipped cream", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 29 - POPCORN
+  // =============================================
+  {
+    category: "POPCORN",
+    puzzleNumber: 29,
+    amuseBouche: { word: "POP", hint: "The sound kernels make when heated", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SALT", hint: "A classic seasoning", revealedIndex: 0 },
+        { word: "WHITE", hint: "The color of plain popped kernels", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CRUNCH", hint: "The satisfying sound when you bite", revealedIndex: 3 },
+        { word: "BUTTERY", hint: "Rich and golden-coated", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "UNPOPPED", hint: "The kernels left at the bottom of the bowl", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 30 - PUZZLES
+  // =============================================
+  {
+    category: "PUZZLES",
+    puzzleNumber: 30,
+    amuseBouche: { word: "FIT", hint: "When pieces connect perfectly", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "CLUE", hint: "A helpful hint to solve", revealedIndex: 0 },
+        { word: "PIECE", hint: "One part of the whole", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "TEASER", hint: "A brain ___ challenges the mind", revealedIndex: 3 },
+        { word: "JIGSAW", hint: "A puzzle with interlocking pieces", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SOLUTION", hint: "The answer you're looking for", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 31 - PENCIL
+  // =============================================
+  {
+    category: "PENCIL",
+    puzzleNumber: 31,
+    amuseBouche: { word: "TIP", hint: "The pointed end used for writing", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "LEAD", hint: "What the writing core is mistakenly called", revealedIndex: 0 },
+        { word: "WRITE", hint: "To put words on paper", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "WOODEN", hint: "Made from timber", revealedIndex: 3 },
+        { word: "SHARPEN", hint: "To restore the point", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "GRAPHITE", hint: "The actual material in the core", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 32 - PAELLA
+  // =============================================
+  {
+    category: "PAELLA",
+    puzzleNumber: 32,
+    amuseBouche: { word: "PAN", hint: "The wide, shallow cooking vessel", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "RICE", hint: "The base grain of this dish", revealedIndex: 0 },
+        { word: "SPAIN", hint: "Country where it originated", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CHICKEN", hint: "A common protein topping", revealedIndex: 3 },
+        { word: "SAFFRON", hint: "The expensive spice that gives it color", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "VALENCIA", hint: "The Spanish region famous for this dish", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 33 - SELFIE
+  // =============================================
+  {
+    category: "SELFIE",
+    puzzleNumber: 33,
+    amuseBouche: { word: "SAY", hint: "_____ cheese!", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SNAP", hint: "To take a quick photo", revealedIndex: 0 },
+        { word: "PHONE", hint: "The device most often used", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CAMERA", hint: "What captures the image", revealedIndex: 3 },
+        { word: "SHARING", hint: "Posting for others to see", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "PORTRAIT", hint: "A photo of a person", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 34 - CARAMEL
+  // =============================================
+  {
+    category: "CARAMEL",
+    puzzleNumber: 34,
+    amuseBouche: { word: "YUM", hint: "Expression of deliciousness", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SOFT", hint: "Tender and easy to chew", revealedIndex: 0 },
+        { word: "APPLE", hint: "A fruit often dipped in this treat", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "STICKY", hint: "Tends to cling to your teeth", revealedIndex: 3 },
+        { word: "POPCORN", hint: "A snack often coated with this", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "LUSCIOUS", hint: "Richly appealing and delicious", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 35 - SPRING
+  // =============================================
+  {
+    category: "SPRING",
+    puzzleNumber: 35,
+    amuseBouche: { word: "BUD", hint: "A flower ready to open", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "BIRD", hint: "Migrating creatures returning north", revealedIndex: 0 },
+        { word: "BLOOM", hint: "When flowers open up", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "GARDEN", hint: "A place to plant and grow", revealedIndex: 3 },
+        { word: "RENEWAL", hint: "A fresh start or rebirth", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SUNLIGHT", hint: "Longer days bring more of this", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 36 - THEATRE
+  // =============================================
+  {
+    category: "THEATRE",
+    puzzleNumber: 36,
+    amuseBouche: { word: "ACT", hint: "A division of a play", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "ROLE", hint: "A part played by an actor", revealedIndex: 0 },
+        { word: "DRAMA", hint: "A serious or emotional performance", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SCRIPT", hint: "The written dialogue for a play", revealedIndex: 3 },
+        { word: "CURTAIN", hint: "It rises at the start and falls at the end", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "BROADWAY", hint: "New York City's famous theatre district", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 37 - BUTTERFLY
+  // =============================================
+  {
+    category: "BUTTERFLY",
+    puzzleNumber: 37,
+    amuseBouche: { word: "FLY", hint: "What butterflies do gracefully", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "LIFE", hint: "The stages from egg to adult", revealedIndex: 0 },
+        { word: "CYCLE", hint: "A repeating pattern of changes", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "WINGED", hint: "Having colorful flight appendages", revealedIndex: 3 },
+        { word: "MONARCH", hint: "An orange and black migratory species", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "ANTENNAE", hint: "Sensory organs on the head", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 38 - LAMB
+  // =============================================
+  {
+    category: "LAMB",
+    puzzleNumber: 38,
+    amuseBouche: { word: "BAA", hint: "The sound a sheep makes", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "WALK", hint: "Lambs can do this within minutes of birth", revealedIndex: 0 },
+        { word: "BLEAT", hint: "The sound a lamb makes", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "VISION", hint: "Lambs have nearly 360 degrees of this", revealedIndex: 3 },
+        { word: "PLAYFUL", hint: "Frisky and full of fun", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SHEARING", hint: "The process of removing wool", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 39 - PUPPY
+  // =============================================
+  {
+    category: "PUPPY",
+    puzzleNumber: 39,
+    amuseBouche: { word: "PUP", hint: "Short for puppy", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "BARK", hint: "The sound a dog makes", revealedIndex: 0 },
+        { word: "FETCH", hint: "A game of throwing and retrieving", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "TREAT", hint: "A tasty reward for good behavior", revealedIndex: 3 },
+        { word: "COLLAR", hint: "Worn around the neck with tags", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CUDDLING", hint: "Snuggling up close for warmth", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 40 - COOKIE
+  // =============================================
+  {
+    category: "COOKIE",
+    puzzleNumber: 40,
+    amuseBouche: { word: "OAT", hint: "The main grain ingredient", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "OATS", hint: "The hearty grain in the recipe", revealedIndex: 0 },
+        { word: "CHEWY", hint: "Soft and easy to bite", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "RAISIN", hint: "A dried grape often added", revealedIndex: 3 },
+        { word: "HEALTHY", hint: "Good for you", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "MOLASSES", hint: "A dark, sweet syrup", revealedIndex: 4 }
       ]}
     ]
   },
@@ -594,7 +908,7 @@ export function getTodaysPuzzle() {
   puzzleDate.setHours(20, 0, 0, 0);
   
   // Calculate days since launch date (March 10, 2026 at 8 PM EST)
-  const launchDate = new Date('2026-03-10T20:00:00-05:00');
+  const launchDate = new Date('2026-03-09T20:00:00-05:00');
   const daysSinceLaunch = Math.floor((puzzleDate - launchDate) / (1000 * 60 * 60 * 24));
   
   // Rotate through puzzles
