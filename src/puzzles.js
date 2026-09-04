@@ -2401,9 +2401,1267 @@ const puzzles = [
       ]}
     ]
   },
+
+  // =============================================
+  // Puzzle 110 - SUGAR COOKIE
+  // =============================================
+  {
+    category: "SUGAR COOKIE",
+    puzzleNumber: 110,
+    amuseBouche: { word: "PIN", hint: "Rolling ___", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "ROLL", hint: "Flatten the dough", revealedIndex: 2 },
+        { word: "DOUGH", hint: "Unbaked mixture", revealedIndex: 3 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CUTTER", hint: "Shape-making tool", revealedIndex: 0 },
+        { word: "CRUMBLY", hint: "Delicate texture", revealedIndex: 4 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CRUMBLY", hint: "Delicate texture", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 111 - FRENCH FRIES
+  // =============================================
+  {
+    category: "FRENCH FRIES",
+    puzzleNumber: 111,
+    amuseBouche: { word: "FRY", hint: "How French fries are cooked", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "CHIPS", hint: "British name for fries", revealedIndex: 0 },
+        { word: "WEDGE", hint: "Thick-cut potato style", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "WAFFLE", hint: "Grid-patterned fry cut", revealedIndex: 3 },
+        { word: "CRUNCHY", hint: "Crispy texture", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SEASONED", hint: "Flavored with spices", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 112 - BLUEBERRY MUFFIN
+  // =============================================
+  {
+    category: "BLUEBERRY MUFFIN",
+    puzzleNumber: 112,
+    amuseBouche: { word: "CUP", hint: "Muffin ___ liner", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "WARM", hint: "Fresh from the oven", revealedIndex: 0 },
+        { word: "BAKED", hint: "Oven cooked", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "RECIPE", hint: "Baking instructions", revealedIndex: 3 },
+        { word: "TEATIME", hint: "Afternoon snack time", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "HOMEMADE", hint: "Made from scratch", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 113 - MALALA
+  // =============================================
+  {
+    category: "MALALA",
+    puzzleNumber: 113,
+    amuseBouche: { word: "ACT", hint: "Standing up for a cause", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "GIRL", hint: "Champion for g _ _ _ s' rights", revealedIndex: 0 },
+        { word: "NOBEL", hint: "___ Peace Prize winner", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "RIGHTS", hint: "Human equality", revealedIndex: 3 },
+        { word: "ADVOCATE", hint: "Passionate supporter", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "EQUALITY", hint: "Fair treatment for all", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 114 - HEAT WAVE
+  // =============================================
+  {
+    category: "HEAT WAVE",
+    puzzleNumber: 114,
+    amuseBouche: { word: "SUN", hint: "Source of the heat", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "BOIL", hint: "Reach maximum heat", revealedIndex: 0 },
+        { word: "SWEAT", hint: "Body's cooling system", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SCORCH", hint: "Burn from intense heat", revealedIndex: 3 },
+        { word: "SWELTER", hint: "Suffer in the heat", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "BLISTERS", hint: "Skin reaction to heat", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 115 - POPSICLES
+  // =============================================
+  {
+    category: "POPSICLES",
+    puzzleNumber: 115,
+    amuseBouche: { word: "ICE", hint: "What a popsicle is made of", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "COLD", hint: "Icy temperature", revealedIndex: 0 },
+        { word: "STICKY", hint: "Melting residue", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "FROZEN", hint: "Solid from cold", revealedIndex: 3 },
+        { word: "MELTING", hint: "Dripping on a hot day", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "NONDAIRY", hint: "No milk ingredients", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 116 - HUSHPUPPIES
+  // =============================================
+  {
+    category: "HUSHPUPPIES",
+    puzzleNumber: 116,
+    amuseBouche: { word: "OIL", hint: "What they're fried in", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SIDE", hint: "Accompaniment dish", revealedIndex: 0 },
+        { word: "FRIED", hint: "Deep-cooked in oil", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CRISPY", hint: "Crunchy exterior", revealedIndex: 3 },
+        { word: "FRITTER", hint: "Fried batter cake", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CORNMEAL", hint: "Main ingredient", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 117 - CHERRIES
+  // =============================================
+  {
+    category: "CHERRIES",
+    puzzleNumber: 117,
+    amuseBouche: { word: "PIT", hint: "The hard center of a cherry", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "BING", hint: "Popular dark variety", revealedIndex: 0 },
+        { word: "BLACK", hint: "Dark sweet variety", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CANNED", hint: "Preserved in syrup", revealedIndex: 3 },
+        { word: "ORCHARD", hint: "Where they are grown", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "BURGUNDY", hint: "Deep red wine color", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 118 - EMOJI
+  // =============================================
+  {
+    category: "EMOJI",
+    puzzleNumber: 118,
+    amuseBouche: { word: "LOL", hint: "A popular text reaction", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "FIRE", hint: "🔥 popular reaction", revealedIndex: 0 },
+        { word: "HEART", hint: "❤️ universal symbol", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SMILEY", hint: "😊 classic expression", revealedIndex: 3 },
+        { word: "PANCAKE", hint: "🥞 our favorite!", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SPARKLES", hint: "✨ magical shimmer", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 119 - NELSON MANDELA
+  // =============================================
+  {
+    category: "NELSON MANDELA",
+    puzzleNumber: 119,
+    amuseBouche: { word: "ANC", hint: "The political party he led", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "FREE", hint: "Liberation from apartheid", revealedIndex: 0 },
+        { word: "UNITY", hint: "Bringing people together", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "LEGACY", hint: "Lasting impact", revealedIndex: 3 },
+        { word: "JUSTICE", hint: "Fairness and equality", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "EQUALITY", hint: "Equal rights for all", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 120 - ICE CREAM
+  // =============================================
+  {
+    category: "ICE CREAM",
+    puzzleNumber: 120,
+    amuseBouche: { word: "COW", hint: "Source of the cream", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "MELT", hint: "What happens in the sun", revealedIndex: 0 },
+        { word: "SCOOP", hint: "Round serving portion", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "FLAVOR", hint: "Taste variety", revealedIndex: 3 },
+        { word: "REFRESH", hint: "Cool and revive", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "VANILLA", hint: "Most popular flavor", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 121 - MOON DAY
+  // =============================================
+  {
+    category: "MOON DAY",
+    puzzleNumber: 121,
+    amuseBouche: { word: "SKY", hint: "Where the moon shines", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "STEP", hint: "One giant leap", revealedIndex: 0 },
+        { word: "LUNAR", hint: "Relating to the moon", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "APOLLO", hint: "Historic space program", revealedIndex: 3 },
+        { word: "MISSION", hint: "Space journey goal", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "COLUMBIA", hint: "Apollo 11 command module", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 122 - JUNK FOOD
+  // =============================================
+  {
+    category: "JUNK FOOD",
+    puzzleNumber: 122,
+    amuseBouche: { word: "FAT", hint: "What junk food is high in", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "CHIP", hint: "Crispy snack", revealedIndex: 0 },
+        { word: "CANDY", hint: "Sweet treat", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "GREASY", hint: "Oily texture", revealedIndex: 3 },
+        { word: "INDULGE", hint: "Give in to cravings", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "DECADENT", hint: "Luxuriously rich", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 123 - HAMMOCK
+  // =============================================
+  {
+    category: "HAMMOCK",
+    puzzleNumber: 123,
+    amuseBouche: { word: "TIE", hint: "How a hammock is secured", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "HANG", hint: "Suspend between two points", revealedIndex: 0 },
+        { word: "SWING", hint: "Gentle back and forth motion", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SNOOZE", hint: "Take a light nap", revealedIndex: 3 },
+        { word: "COMFORT", hint: "Cozy relaxation", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CHILLING", hint: "Laid-back lounging", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 124 - VANILLA ICE CREAM
+  // =============================================
+  {
+    category: "VANILLA ICE CREAM",
+    puzzleNumber: 124,
+    amuseBouche: { word: "ICY", hint: "Cold and frosty", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "BEAN", hint: "Source of vanilla flavor", revealedIndex: 0 },
+        { word: "SCOOP", hint: "Round serving portion", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "FRENCH", hint: "Custard-based style", revealedIndex: 3 },
+        { word: "CLASSIC", hint: "Timeless favorite", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SANDWICH", hint: "Ice cream between cookies", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 125 - JOKE
+  // =============================================
+  {
+    category: "JOKE",
+    puzzleNumber: 125,
+    amuseBouche: { word: "FUN", hint: "What a good joke brings", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "QUIP", hint: "Clever witty remark", revealedIndex: 0 },
+        { word: "CRACK", hint: "Tell a joke", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "COMEDY", hint: "Humor genre", revealedIndex: 3 },
+        { word: "COMICAL", hint: "Amusingly funny", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CORNBALL", hint: "Cheesy, corny humor", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 126 - CAROUSEL
+  // =============================================
+  {
+    category: "CAROUSEL",
+    puzzleNumber: 126,
+    amuseBouche: { word: "TOP", hint: "Another spinning toy", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "FAIR", hint: "Amusement event", revealedIndex: 0 },
+        { word: "MUSIC", hint: "Calliope sounds", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "ANIMAL", hint: "Horse or other ride figure", revealedIndex: 3 },
+        { word: "CHARIOT", hint: "Carriage-style ride", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CARNIVAL", hint: "Traveling amusement show", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 127 - BAGELS
+  // =============================================
+  {
+    category: "BAGELS",
+    puzzleNumber: 127,
+    amuseBouche: { word: "LOX", hint: "Classic bagel topping (smoked salmon)", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SOFT", hint: "Fresh-baked texture", revealedIndex: 0 },
+        { word: "CHEWY", hint: "Dense satisfying bite", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "GARLIC", hint: "Savory popular variety", revealedIndex: 3 },
+        { word: "BOILING", hint: "Key step before baking", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CINNAMON", hint: "Sweet spiced variety", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 128 - BAGPIPES
+  // =============================================
+  {
+    category: "BAGPIPES",
+    puzzleNumber: 128,
+    amuseBouche: { word: "AIR", hint: "What powers the pipes", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "WIND", hint: "Air-powered instrument", revealedIndex: 0 },
+        { word: "PIPER", hint: "Bagpipe player", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SCOTCH", hint: "Scottish heritage", revealedIndex: 3 },
+        { word: "MUSICAL", hint: "Relating to music", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "HIGHLAND", hint: "Scottish region", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 129 - MILK CHOCOLATE
+  // =============================================
+  {
+    category: "MILK CHOCOLATE",
+    puzzleNumber: 129,
+    amuseBouche: { word: "BAR", hint: "A solid piece of chocolate", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "MELT", hint: "Dissolves on your tongue", revealedIndex: 0 },
+        { word: "COCOA", hint: "Chocolate base ingredient", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SMOOTH", hint: "Silky texture", revealedIndex: 3 },
+        { word: "TEXTURE", hint: "Creamy mouthfeel", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "DECADENT", hint: "Luxuriously rich", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 130 - TIGERS
+  // =============================================
+  {
+    category: "TIGERS",
+    puzzleNumber: 130,
+    amuseBouche: { word: "CUB", hint: "A baby tiger", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "CLAW", hint: "Sharp retractable nail", revealedIndex: 0 },
+        { word: "TEETH", hint: "Powerful fangs", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "BENGAL", hint: "Most common tiger subspecies", revealedIndex: 3 },
+        { word: "STRIPED", hint: "Unique coat pattern", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SOLITARY", hint: "Prefers to live alone", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 131 - PAPERBACK BOOKS
+  // =============================================
+  {
+    category: "PAPERBACK BOOKS",
+    puzzleNumber: 131,
+    amuseBouche: { word: "LIT", hint: "Short for literature", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SOFT", hint: "Flexible cover material", revealedIndex: 0 },
+        { word: "BEACH", hint: "Perfect summer reading location", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CLASSIC", hint: "Timeless literary work", revealedIndex: 3 },
+        { word: "PENGUIN", hint: "Large and famous paperback publisher", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "PORTABLE", hint: "Easy to carry anywhere", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 132 - AVOCADO
+  // =============================================
+  {
+    category: "AVOCADO",
+    puzzleNumber: 132,
+    amuseBouche: { word: "DIP", hint: "Guacamole is a popular ___", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "HASS", hint: "Most popular variety", revealedIndex: 0 },
+        { word: "TOAST", hint: "Trendy breakfast topping", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SLICED", hint: "Cut into pieces", revealedIndex: 3 },
+        { word: "CHOPPED", hint: "Diced for salsa or salad", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CILANTRO", hint: "Common fresh herb pairing; some say tastes soapy", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 133 - MTV
+  // =============================================
+  {
+    category: "MTV",
+    puzzleNumber: 133,
+    amuseBouche: { word: "MTV", hint: "The channel's own abbreviation", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "WANT", hint: "I ___ my MTV!", revealedIndex: 0 },
+        { word: "VIDEO", hint: "___ Killed the Radio Star song", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CONCERT", hint: "Live music performance", revealedIndex: 3 },
+        { word: "POPULAR", hint: "Mainstream, well-liked, and trendy", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CULTURE", hint: "Pop ___ influence", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 134 - COLORING BOOK
+  // =============================================
+  {
+    category: "COLORING BOOK",
+    puzzleNumber: 134,
+    amuseBouche: { word: "ART", hint: "What coloring is a form of", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "PAGE", hint: "Single sheet to color", revealedIndex: 0 },
+        { word: "RELAX", hint: "Calming activity helps you ______", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CRAYON", hint: "Waxy coloring tool", revealedIndex: 3 },
+        { word: "PIGMENT", hint: "Color-giving substance", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "BLENDING", hint: "Mixing colors together", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 135 - WATERMELON
+  // =============================================
+  {
+    category: "WATERMELON",
+    puzzleNumber: 135,
+    amuseBouche: { word: "RED", hint: "The color of ripe watermelon flesh", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "RIND", hint: "Green striped outer layer", revealedIndex: 0 },
+        { word: "CHILL", hint: "Serve it cold", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "PICNIC", hint: "Outdoor summer meal", revealedIndex: 3 },
+        { word: "REFRESH", hint: "Cool and reviving", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "OUTDOORS", hint: "Perfect summer setting", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 136 - CHOCOLATE CHIP COOKIES
+  // =============================================
+  {
+    category: "CHOCOLATE CHIP COOKIES",
+    puzzleNumber: 136,
+    amuseBouche: { word: "JAR", hint: "Where cookies are kept", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "BAKE", hint: "Cook in the oven", revealedIndex: 0 },
+        { word: "GOOEY", hint: "Soft and melty center", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "RECIPE", hint: "Baking instructions", revealedIndex: 3 },
+        { word: "CRUMBLY", hint: "Messy delicate texture", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "BAKEWARE", hint: "Pans and sheets", revealedIndex: 2 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 137 - TRAFFIC LIGHT
+  // =============================================
+  {
+    category: "TRAFFIC LIGHT",
+    puzzleNumber: 137,
+    amuseBouche: { word: "RED", hint: "Stop color", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "FLOW", hint: "Smooth movement of vehicles", revealedIndex: 0 },
+        { word: "SAFER", hint: "More protected", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SIGNAL", hint: "Visual indicator", revealedIndex: 3 },
+        { word: "CONTROL", hint: "Manage the intersection", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "FLASHING", hint: "Blinking warning light", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 138 - FARMWORKER APPRECIATION
+  // =============================================
+  {
+    category: "FARMWORKER APPRECIATION",
+    puzzleNumber: 138,
+    amuseBouche: { word: "JOB", hint: "What farmworkers do every day", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "HERO", hint: "Champion", revealedIndex: 0 },
+        { word: "EXERT", hint: "Apply great effort", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "UNSUNG", hint: "Not given enough credit", revealedIndex: 3 },
+        { word: "HARVEST", hint: "Gathering of crops", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "ECONOMIC", hint: "Relating to the economy", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 139 - LIGHTHOUSES
+  // =============================================
+  {
+    category: "LIGHTHOUSES",
+    puzzleNumber: 139,
+    amuseBouche: { word: "SEA", hint: "Where lighthouses stand guard", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "LENS", hint: "Light-focusing element", revealedIndex: 0 },
+        { word: "GUIDE", hint: "Lead or direct safely", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "BEACON", hint: "Guiding light signal", revealedIndex: 3 },
+        { word: "LANTERN", hint: "Top light chamber", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "NAVIGATE", hint: "Find your way at sea", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 140 - HAPPINESS
+  // =============================================
+  {
+    category: "HAPPINESS",
+    puzzleNumber: 140,
+    amuseBouche: { word: "JOY", hint: "A simple word for happiness", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "GLEE", hint: "Joyful delight", revealedIndex: 0 },
+        { word: "BLISS", hint: "Perfect happiness", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "THRILL", hint: "Exciting pleasure", revealedIndex: 3 },
+        { word: "DELIGHT", hint: "Great pleasure", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "JUBILANT", hint: "Feeling great joy", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 141 - RICE PUDDING
+  // =============================================
+  {
+    category: "RICE PUDDING",
+    puzzleNumber: 141,
+    amuseBouche: { word: "POT", hint: "Where rice pudding simmers", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "MILK", hint: "Creamy base liquid", revealedIndex: 0 },
+        { word: "SUGAR", hint: "Sweetening ingredient", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SPICES", hint: "Cinnamon or nutmeg additions", revealedIndex: 3 },
+        { word: "ROYALTY", hint: "Kings and queens", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CARDAMOM", hint: "Aromatic spice often used", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 142 - S'MORES
+  // =============================================
+  {
+    category: "S'MORES",
+    puzzleNumber: 142,
+    amuseBouche: { word: "HOT", hint: "Fresh off the campfire", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SOME", hint: "Short for '____ more'", revealedIndex: 0 },
+        { word: "ROAST", hint: "Cook over open flame", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "GRAHAM", hint: "___ cracker base", revealedIndex: 3 },
+        { word: "MELTING", hint: "Chocolate becoming gooey", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "CAMPFIRE", hint: "Outdoor cooking fire", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 143 - HIP HOP
+  // =============================================
+  {
+    category: "HIP HOP",
+    puzzleNumber: 143,
+    amuseBouche: { word: "MIC", hint: "What an emcee raps into", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "BEAT", hint: "Musical rhythm foundation", revealedIndex: 0 },
+        { word: "DANCE", hint: "Movement to the music", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "GROOVE", hint: "Rhythmic feel", revealedIndex: 3 },
+        { word: "DEEJAY", hint: "One who spins records", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "BREAKING", hint: "Breakdancing style", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 144 - MIDDLE CHILD
+  // =============================================
+  {
+    category: "MIDDLE CHILD",
+    puzzleNumber: 144,
+    amuseBouche: { word: "MID", hint: "Short for middle", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "TEAM", hint: "Group player", revealedIndex: 0 },
+        { word: "PEACE", hint: "Keeping harmony", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "UNIQUE", hint: "One of a kind", revealedIndex: 3 },
+        { word: "SQUEEZE", hint: "Tight middle spot", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SANDWICH", hint: "Between; in the middle", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 145 - CALLIGRAPHY
+  // =============================================
+  {
+    category: "CALLIGRAPHY",
+    puzzleNumber: 145,
+    amuseBouche: { word: "INK", hint: "What flows through the pen", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "NIBS", hint: "Pen tips for ink writing", revealedIndex: 0 },
+        { word: "BRUSH", hint: "Painting tool for lettering", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "STYLED", hint: "Decoratively formed", revealedIndex: 3 },
+        { word: "FOUNTAIN", hint: "___ pen writing tool", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "FLOURISH", hint: "Decorative pen stroke", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 146 - CHAMELEON
+  // =============================================
+  {
+    category: "CHAMELEON",
+    puzzleNumber: 146,
+    amuseBouche: { word: "HUE", hint: "A shade of color", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "COLD", hint: "Temperature they sense", revealedIndex: 0 },
+        { word: "COLOR", hint: "What they change", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "LIZARD", hint: "Reptile family", revealedIndex: 3 },
+        { word: "REPTILE", hint: "Cold-blooded animal class", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "BLENDING", hint: "Camouflage technique", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 147 - RELAXATION
+  // =============================================
+  {
+    category: "RELAXATION",
+    puzzleNumber: 147,
+    amuseBouche: { word: "SPA", hint: "A place to unwind", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SLOW", hint: "Take it easy", revealedIndex: 0 },
+        { word: "CHILL", hint: "Relax and unwind", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "UNWIND", hint: "Let go of tension", revealedIndex: 3 },
+        { word: "ROUTINE", hint: "A daily practice or usual schedule", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "MEDITATE", hint: "Mindful stillness practice", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 148 - ROLLER COASTER
+  // =============================================
+  {
+    category: "ROLLER COASTER",
+    puzzleNumber: 148,
+    amuseBouche: { word: "CAR", hint: "What you ride in on the track", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "WILD", hint: "Thrilling and unpredictable", revealedIndex: 0 },
+        { word: "BUMPY", hint: "Rough and jolting ride", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SCREAM", hint: "Reaction to the drop", revealedIndex: 3 },
+        { word: "DESCENT", hint: "The thrilling downhill plunge", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "WHIPLASH", hint: "Neck-snapping speed effect", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 149 - THRIFT SHOP
+  // =============================================
+  {
+    category: "THRIFT SHOP",
+    puzzleNumber: 149,
+    amuseBouche: { word: "BOX", hint: "Where donated items get sorted", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "DEAL", hint: "A bargain find", revealedIndex: 0 },
+        { word: "RETRO", hint: "Vintage style", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "RESALE", hint: "Selling secondhand", revealedIndex: 3 },
+        { word: "UPCYCLE", hint: "Transform old into new", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "RUMMAGE", hint: "Search through items", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 150 - FAJITAS
+  // =============================================
+  {
+    category: "FAJITAS",
+    puzzleNumber: 150,
+    amuseBouche: { word: "PAN", hint: "What fajitas sizzle in", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "BEEF", hint: "Classic protein filling", revealedIndex: 0 },
+        { word: "ONION", hint: "Caramelized veggie topping", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "PEPPER", hint: "Colorful sautéed veggie", revealedIndex: 3 },
+        { word: "SKILLET", hint: "Cast iron cooking pan", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SIZZLING", hint: "Hot and crackling sound", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 151 - AVIATION
+  // =============================================
+  {
+    category: "AVIATION",
+    puzzleNumber: 151,
+    amuseBouche: { word: "JET", hint: "A fast type of aircraft", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "HAWK", hint: "Kitty ____", revealedIndex: 0 },
+        { word: "PLANE", hint: "Flying machine", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "GLIDER", hint: "Engineless aircraft", revealedIndex: 3 },
+        { word: "WRIGHT", hint: "Famous flying brothers", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "BROTHERS", hint: "Orville and Wilbur", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 152 - BACON
+  // =============================================
+  {
+    category: "BACON",
+    puzzleNumber: 152,
+    amuseBouche: { word: "PIG", hint: "The animal bacon comes from", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "PORK", hint: "Pig-derived meat", revealedIndex: 0 },
+        { word: "SALTY", hint: "Savory cured flavor", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SMOKED", hint: "Slow-cooked with wood", revealedIndex: 3 },
+        { word: "STREAKY", hint: "Fatty strip variety", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "PANCAKES", hint: "Classic breakfast pairing", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 153 - HAWAIIAN SHIRT
+  // =============================================
+  {
+    category: "HAWAIIAN SHIRT",
+    puzzleNumber: 153,
+    amuseBouche: { word: "LEI", hint: "A floral necklace worn with the shirt", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "LUAU", hint: "Island party", revealedIndex: 0 },
+        { word: "ALOHA", hint: "Hawaiian greeting on the shirt tag", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "FLORAL", hint: "Flower-printed pattern", revealedIndex: 2 },
+        { word: "BRIGHT", hint: "Bold vivid colors", revealedIndex: 3 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "TROPICAL", hint: "Island-inspired style", revealedIndex: 0 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 154 - TOOTH FAIRY
+  // =============================================
+  {
+    category: "TOOTH FAIRY",
+    puzzleNumber: 154,
+    amuseBouche: { word: "GUM", hint: "Where your teeth are rooted", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "COIN", hint: "Reward left under pillow", revealedIndex: 0 },
+        { word: "MAGIC", hint: "Enchanting fairy power", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "PILLOW", hint: "Where the tooth is hidden", revealedIndex: 3 },
+        { word: "QUARTER", hint: "Common coin reward", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SLEEPING", hint: "Child must be doing this", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 155 - CUBAN SANDWICH
+  // =============================================
+  {
+    category: "CUBAN SANDWICH",
+    puzzleNumber: 155,
+    amuseBouche: { word: "HAM", hint: "A classic filling meat", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "PORK", hint: "Primary protein filling", revealedIndex: 0 },
+        { word: "BREAD", hint: "Cuban roll base", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "CHEESE", hint: "Melted Swiss layer", revealedIndex: 3 },
+        { word: "PICKLES", hint: "Tangy essential ingredient", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "PRESSED", hint: "Flattened and grilled", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 156 - AMELIA EARHART
+  // =============================================
+  {
+    category: "AMELIA EARHART",
+    puzzleNumber: 156,
+    amuseBouche: { word: "FLY", hint: "What she loved to do", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SOLO", hint: "Flying alone", revealedIndex: 0 },
+        { word: "COAST", hint: "_____-to-coast journey", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "DEPART", hint: "Leave from Los Angeles, CA", revealedIndex: 3 },
+        { word: "ARRIVAL", hint: "Landing at Newark, NJ", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "LOCKHEED", hint: "Aircraft manufacturer she flew", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 157 - UNITED STATES NATIONAL PARKS
+  // =============================================
+  {
+    category: "UNITED STATES NATIONAL PARKS",
+    puzzleNumber: 157,
+    amuseBouche: { word: "USA", hint: "Home to these protected lands", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "MESA", hint: "Flat-topped rock formation", revealedIndex: 0 },
+        { word: "GORGE", hint: "Deep narrow canyon", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "GEYSER", hint: "Yellowstone's hot spring", revealedIndex: 3 },
+        { word: "GLACIER", hint: "Slow-moving ice mass", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "MONUMENT", hint: "Protected landmark", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 158 - EQUALITY
+  // =============================================
+  {
+    category: "EQUALITY",
+    puzzleNumber: 158,
+    amuseBouche: { word: "ALL", hint: "Equal rights for ___", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "VOTE", hint: "The right to cast a ballot", revealedIndex: 0 },
+        { word: "WOMEN", hint: "Who gained voting rights", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "RIGHTS", hint: "Freedoms and liberties", revealedIndex: 3 },
+        { word: "GRANTED", hint: "Officially given", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "SUFFRAGE", hint: "The right to vote", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 159 - BANANAS
+  // =============================================
+  {
+    category: "BANANAS",
+    puzzleNumber: 159,
+    amuseBouche: { word: "APE", hint: "An animal fond of bananas", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "PEEL", hint: "Remove the outer skin", revealedIndex: 0 },
+        { word: "BREAD", hint: "Baked banana loaf", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "YELLOW", hint: "Ripe color", revealedIndex: 3 },
+        { word: "PUDDING", hint: "Creamy banana dessert", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "PLANTAIN", hint: "Cooking banana variety", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 160 - ST. AUGUSTINE, FLORIDA
+  // =============================================
+  {
+    category: "ST. AUGUSTINE, FLORIDA",
+    puzzleNumber: 160,
+    amuseBouche: { word: "OLD", hint: "America's ___est city", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "FORT", hint: "Historic Castillo de San Marcos", revealedIndex: 0 },
+        { word: "GHOST", hint: "Famous haunted tours", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "BRIDGE", hint: "Lions guard this landmark", revealedIndex: 3 },
+        { word: "SPANISH", hint: "Colonial heritage", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "FOUNTAIN", hint: "Of Youth attraction", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 161 - CHOP SUEY
+  // =============================================
+  {
+    category: "CHOP SUEY",
+    puzzleNumber: 161,
+    amuseBouche: { word: "WOK", hint: "The pan it's cooked in", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "STIR", hint: "____ Fry", revealedIndex: 0 },
+        { word: "SAUCE", hint: "Soy _____", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "SAVORY", hint: "Rich, satisfying flavor", revealedIndex: 3 },
+        { word: "VARIETY", hint: "Mix of many ingredients", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "LEFTOVER", hint: "What the dish is made from", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 162 - WHALE SHARKS
+  // =============================================
+  {
+    category: "WHALE SHARKS",
+    puzzleNumber: 162,
+    amuseBouche: { word: "FIN", hint: "A shark's distinctive feature", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "FISH", hint: "Their true animal class", revealedIndex: 0 },
+        { word: "GIANT", hint: "Enormous in size", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "GENTLE", hint: "Peaceful despite their size", revealedIndex: 3 },
+        { word: "LARGEST", hint: "Biggest fish in the ocean", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "LIFESPAN", hint: "How long they live", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 163 - TRAIL MIX
+  // =============================================
+  {
+    category: "TRAIL MIX",
+    puzzleNumber: 163,
+    amuseBouche: { word: "NUT", hint: "A common ingredient", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "NUTS", hint: "Almonds, cashews, peanuts", revealedIndex: 0 },
+        { word: "SEEDS", hint: "Sunflower or pumpkin additions", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "RAISINS", hint: "Dried grape sweetener", revealedIndex: 3 },
+        { word: "ANCIENT", hint: "Very old origins", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "OUTDOORS", hint: "Where it's enjoyed most", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 164 - NO RHYME AND NO REASON
+  // =============================================
+  {
+    category: "NO RHYME AND NO REASON",
+    puzzleNumber: 164,
+    amuseBouche: { word: "ODD", hint: "Strange and illogical", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "PINT", hint: "A unit of liquid measure", revealedIndex: 0 },
+        { word: "MONTH", hint: "30 or 31 days", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "ORANGE", hint: "A citrus fruit", revealedIndex: 3 },
+        { word: "CHIMNEY", hint: "Smoke rises through this", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "MARATHON", hint: "A 26.2 mile race", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 165 - EARRINGS
+  // =============================================
+  {
+    category: "EARRINGS",
+    puzzleNumber: 165,
+    amuseBouche: { word: "EAR", hint: "Where earrings are worn", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "LOBE", hint: "Lower part of the ear", revealedIndex: 0 },
+        { word: "PEARL", hint: "Classic elegant gem", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "PIERCE", hint: "Make a hole for jewelry", revealedIndex: 3 },
+        { word: "JEWELRY", hint: "Decorative accessories", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "GEMSTONE", hint: "Precious stone in a setting", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
+  // =============================================
+  // Puzzle 166 - SKYSCRAPER
+  // =============================================
+  {
+    category: "SKYSCRAPER",
+    puzzleNumber: 166,
+    amuseBouche: { word: "SKY", hint: "What a skyscraper reaches toward", revealedIndex: 0 },
+    courses: [
+      { name: "Appetizer", emoji: "🥗", words: [
+        { word: "SWAY", hint: "What tall buildings do in wind", revealedIndex: 0 },
+        { word: "TOWER", hint: "Tall structure", revealedIndex: 2 },
+      ]},
+      { name: "Main Course", emoji: "🍝", words: [
+        { word: "FACADE", hint: "Exterior face of a building", revealedIndex: 3 },
+        { word: "SKYLINE", hint: "City's silhouette", revealedIndex: 0 },
+      ]},
+      { name: "Dessert", emoji: "🧁", words: [
+        { word: "DOWNTOWN", hint: "City center location", revealedIndex: 4 }
+      ]}
+    ]
+  },
+
 ];
 
-// Function to get today's puzzle based on EST time
+// =====================================================================
+// UPDATED getTodaysPuzzle() — replace your existing function entirely
+// =====================================================================
+
 export function getTodaysPuzzle() {
   const now = new Date();
   const estTime = new Date(now.toLocaleString('en-US', { timeZone: 'America/New_York' }));
@@ -2418,18 +3676,27 @@ export function getTodaysPuzzle() {
   const launchDate = new Date('2026-03-09T20:00:00-05:00');
   const daysSinceLaunch = Math.floor((puzzleDate - launchDate) / (1000 * 60 * 60 * 24));
 
-  const OLD_LENGTH = 55;              // your original puzzle set
-  const LAST_OLD_LAP_END = 164;       // the day the current lap finishes on Picnic (~Aug 20, 2026)
+  const OLD_LENGTH = 55;              // original 55 puzzles (Plant a Flower...Picnic)
+  const LAST_OLD_LAP_END = 164;       // day Picnic airs its final time in the old cycle
+
+  const BATCH2_LENGTH = 54;           // Compost...Almonds
+  const BATCH2_START = 165;           // Compost's debut day
+  const BATCH2_END = BATCH2_START + BATCH2_LENGTH - 1; // 218, Almonds' final pass
+
+  const BATCH3_LENGTH = 57;           // Sugar Cookie...Skyscraper
+  const BATCH3_START = BATCH2_END + 1; // 219, Sugar Cookie's debut day
 
   let puzzleIndex;
   if (daysSinceLaunch <= LAST_OLD_LAP_END) {
-    // Business as usual — cycles through puzzles 1–55, unaffected by the new content
+    // Puzzles 1-55, business as usual
     puzzleIndex = daysSinceLaunch % OLD_LENGTH;
+  } else if (daysSinceLaunch <= BATCH2_END) {
+    // Puzzles 56-109 (Compost...Almonds), one pass through
+    puzzleIndex = OLD_LENGTH + ((daysSinceLaunch - BATCH2_START) % BATCH2_LENGTH);
   } else {
-    // Once the current lap finishes, roll straight into the new puzzles (56+)
-    // instead of repeating puzzle 1, and cycle through all 109 from there on
-    const newLength = puzzles.length - OLD_LENGTH;
-    puzzleIndex = OLD_LENGTH + ((daysSinceLaunch - LAST_OLD_LAP_END - 1) % newLength);
+    // Puzzles 110-166 (Sugar Cookie...Skyscraper), cycles here from now on
+    // (add a 4th branch the same way next time you add more content)
+    puzzleIndex = OLD_LENGTH + BATCH2_LENGTH + ((daysSinceLaunch - BATCH3_START) % BATCH3_LENGTH);
   }
 
   return puzzles[puzzleIndex];
