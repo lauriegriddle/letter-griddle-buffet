@@ -3655,6 +3655,7 @@ const puzzles = [
       ]}
     ]
   },
+  
   // =============================================
   // Puzzle 167 - MACADAMIA NUTS
   // =============================================
@@ -4727,32 +4728,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 218 - CHUCKY
-  // =============================================
-  {
-    category: "CHUCKY",
-    puzzleNumber: 218,
-    amuseBouche: { word: "TOY", hint: "What kind of doll Chucky is", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "DOLL", hint: "What Chucky is", revealedIndex: 0 },
-        { word: "MOVIE", hint: "Child's Play film franchise", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "HORROR", hint: "Scary film genre", revealedIndex: 3 },
-        { word: "FRIENDS", hint: "_____ till the end", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "FRIGHTEN", hint: "To scare someone", revealedIndex: 4 }
-      ]}
-    ]
-  },
-  // =============================================
-  // Puzzle 219 - PUMPKINS
+  // Puzzle 218 - PUMPKINS
   // =============================================
   {
     category: "PUMPKINS",
-    puzzleNumber: 219,
+    puzzleNumber: 218,
     amuseBouche: { word: "PIE", hint: "A classic pumpkin dessert", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -4769,11 +4749,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 220 - BLACK CAT
+  // Puzzle 219 - BLACK CAT
   // =============================================
   {
     category: "BLACK CAT",
-    puzzleNumber: 220,
+    puzzleNumber: 219,
     amuseBouche: { word: "CAT", hint: "What this animal is", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -4790,11 +4770,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 221 - STUFFED ANIMALS
+  // Puzzle 220 - STUFFED ANIMALS
   // =============================================
   {
     category: "STUFFED ANIMALS",
-    puzzleNumber: 221,
+    puzzleNumber: 220,
     amuseBouche: { word: "HUG", hint: "What you do with a stuffed animal", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -4811,11 +4791,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 222 - INTERNET
+  // Puzzle 221 - INTERNET
   // =============================================
   {
     category: "INTERNET",
-    puzzleNumber: 222,
+    puzzleNumber: 221,
     amuseBouche: { word: "WEB", hint: "A network, spun like a spider's", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -4832,11 +4812,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 223 - CANDY CORN
+  // Puzzle 222 - CANDY CORN
   // =============================================
   {
     category: "CANDY CORN",
-    puzzleNumber: 223,
+    puzzleNumber: 222,
     amuseBouche: { word: "COB", hint: "What corn naturally grows on", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -4853,32 +4833,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 224 - HALLOWEEN
-  // =============================================
-  {
-    category: "HALLOWEEN",
-    puzzleNumber: 224,
-    amuseBouche: { word: "BOO", hint: "A classic ghostly exclamation", revealedIndex: 0 },
-    courses: [
-      { name: "Appetizer", emoji: "🥗", words: [
-        { word: "JACK", hint: "____ o'lantern", revealedIndex: 0 },
-        { word: "TRICK", hint: "___ or treat!", revealedIndex: 2 },
-      ]},
-      { name: "Main Course", emoji: "🍝", words: [
-        { word: "TREATS", hint: "Candy collected door to door", revealedIndex: 3 },
-        { word: "HAUNTED", hint: "___ house attraction", revealedIndex: 0 },
-      ]},
-      { name: "Dessert", emoji: "🧁", words: [
-        { word: "COSTUMES", hint: "Dress up disguises", revealedIndex: 4 }
-      ]}
-    ]
-  },
-  // =============================================
-  // Puzzle 225 - VEGAN
+  // Puzzle 223 - VEGAN
   // =============================================
   {
     category: "VEGAN",
-    puzzleNumber: 225,
+    puzzleNumber: 223,
     amuseBouche: { word: "SOY", hint: "A common plant-based protein source", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -4895,11 +4854,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 226 - OHIO
+  // Puzzle 224 - OHIO
   // =============================================
   {
     category: "OHIO",
-    puzzleNumber: 226,
+    puzzleNumber: 224,
     amuseBouche: { word: "OSU", hint: "Short for the state's flagship university", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -4916,11 +4875,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 227 - HOW CLICHE!
+  // Puzzle 225 - HOW CLICHE!
   // =============================================
   {
     category: "HOW CLICHE!",
-    puzzleNumber: 227,
+    puzzleNumber: 225,
     amuseBouche: { word: "OLD", hint: "What an overused phrase feels", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -4937,11 +4896,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 228 - EASY-BAKE OVEN
+  // Puzzle 226 - EASY-BAKE OVEN
   // =============================================
   {
     category: "EASY-BAKE OVEN",
-    puzzleNumber: 228,
+    puzzleNumber: 226,
     amuseBouche: { word: "MIX", hint: "What comes in the little boxed packets", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -4958,11 +4917,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 229 - MONOPOLY
+  // Puzzle 227 - MONOPOLY
   // =============================================
   {
     category: "MONOPOLY",
-    puzzleNumber: 229,
+    puzzleNumber: 227,
     amuseBouche: { word: "DIE", hint: "What you roll to move", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -4979,11 +4938,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 230 - SAXOPHONE
+  // Puzzle 228 - SAXOPHONE
   // =============================================
   {
     category: "SAXOPHONE",
-    puzzleNumber: 230,
+    puzzleNumber: 228,
     amuseBouche: { word: "SAX", hint: "Common short name for the instrument", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5000,11 +4959,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 231 - GETTING OUTSIDE
+  // Puzzle 229 - GETTING OUTSIDE
   // =============================================
   {
     category: "GETTING OUTSIDE",
-    puzzleNumber: 231,
+    puzzleNumber: 229,
     amuseBouche: { word: "SUN", hint: "A source of vitamin D outdoors", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5021,11 +4980,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 232 - CAPPUCCINO
+  // Puzzle 230 - CAPPUCCINO
   // =============================================
   {
     category: "CAPPUCCINO",
-    puzzleNumber: 232,
+    puzzleNumber: 230,
     amuseBouche: { word: "SIP", hint: "How you drink it slowly", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5042,11 +5001,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 233 - LOUISIANA
+  // Puzzle 231 - LOUISIANA
   // =============================================
   {
     category: "LOUISIANA",
-    puzzleNumber: 233,
+    puzzleNumber: 231,
     amuseBouche: { word: "BIG", hint: "Louisiana's ___ Easy nickname", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5063,11 +5022,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 234 - SESAME STREET
+  // Puzzle 232 - SESAME STREET
   // =============================================
   {
     category: "SESAME STREET",
-    puzzleNumber: 234,
+    puzzleNumber: 232,
     amuseBouche: { word: "PBS", hint: "The public broadcaster that airs it", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5084,11 +5043,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 235 - VETERANS
+  // Puzzle 233 - VETERANS
   // =============================================
   {
     category: "VETERANS",
-    puzzleNumber: 235,
+    puzzleNumber: 233,
     amuseBouche: { word: "VET", hint: "Short for veteran", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5105,11 +5064,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 236 - CHICKEN SOUP FOR THE SOUL
+  // Puzzle 234 - CHICKEN SOUP FOR THE SOUL
   // =============================================
   {
     category: "CHICKEN SOUP FOR THE SOUL",
-    puzzleNumber: 236,
+    puzzleNumber: 234,
     amuseBouche: { word: "HUG", hint: "A comforting embrace", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5126,11 +5085,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 237 - THE LION KING
+  // Puzzle 235 - THE LION KING
   // =============================================
   {
     category: "THE LION KING",
-    puzzleNumber: 237,
+    puzzleNumber: 235,
     amuseBouche: { word: "CUB", hint: "A young lion", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5147,11 +5106,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 238 - GUACAMOLE
+  // Puzzle 236 - GUACAMOLE
   // =============================================
   {
     category: "GUACAMOLE",
-    puzzleNumber: 238,
+    puzzleNumber: 236,
     amuseBouche: { word: "DIP", hint: "What you scoop it up with a chip", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5168,11 +5127,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 239 - I LOVE TO WRITE
+  // Puzzle 237 - I LOVE TO WRITE
   // =============================================
   {
     category: "I LOVE TO WRITE",
-    puzzleNumber: 239,
+    puzzleNumber: 237,
     amuseBouche: { word: "PEN", hint: "A classic writing tool", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5189,11 +5148,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 240 - INDIANA
+  // Puzzle 238 - INDIANA
   // =============================================
   {
     category: "INDIANA",
-    puzzleNumber: 240,
+    puzzleNumber: 238,
     amuseBouche: { word: "IND", hint: "Common abbreviation for the state", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5210,11 +5169,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 241 - BREAD
+  // Puzzle 239 - BREAD
   // =============================================
   {
     category: "BREAD",
-    puzzleNumber: 241,
+    puzzleNumber: 239,
     amuseBouche: { word: "RYE", hint: "A hearty type of bread", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5231,11 +5190,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 242 - APPLE CIDER
+  // Puzzle 240 - APPLE CIDER
   // =============================================
   {
     category: "APPLE CIDER",
-    puzzleNumber: 242,
+    puzzleNumber: 240,
     amuseBouche: { word: "JUG", hint: "A container cider often comes in", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5252,11 +5211,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 243 - CARBONATED BEVERAGE
+  // Puzzle 241 - CARBONATED BEVERAGE
   // =============================================
   {
     category: "CARBONATED BEVERAGE",
-    puzzleNumber: 243,
+    puzzleNumber: 241,
     amuseBouche: { word: "POP", hint: "A bubbly nickname for soda", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5273,11 +5232,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 244 - A CHARLIE BROWN THANKSGIVING
+  // Puzzle 242 - A CHARLIE BROWN THANKSGIVING
   // =============================================
   {
     category: "A CHARLIE BROWN THANKSGIVING",
-    puzzleNumber: 244,
+    puzzleNumber: 242,
     amuseBouche: { word: "TOM", hint: "Short for a male turkey", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5294,11 +5253,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 245 - ROCKY
+  // Puzzle 243 - ROCKY
   // =============================================
   {
     category: "ROCKY",
-    puzzleNumber: 245,
+    puzzleNumber: 243,
     amuseBouche: { word: "JAB", hint: "A quick boxing punch", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5315,11 +5274,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 246 - CRANBERRY
+  // Puzzle 244 - CRANBERRY
   // =============================================
   {
     category: "CRANBERRY",
-    puzzleNumber: 246,
+    puzzleNumber: 244,
     amuseBouche: { word: "BOG", hint: "Where cranberries are grown", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5336,11 +5295,11 @@ const puzzles = [
     ]
   },
   // =============================================
-  // Puzzle 247 - JUKEBOX
+  // Puzzle 245 - JUKEBOX
   // =============================================
   {
     category: "JUKEBOX",
-    puzzleNumber: 247,
+    puzzleNumber: 245,
     amuseBouche: { word: "HIT", hint: "A popular song on the jukebox", revealedIndex: 0 },
     courses: [
       { name: "Appetizer", emoji: "🥗", words: [
@@ -5389,8 +5348,8 @@ export function getTodaysPuzzle() {
   const BATCH3_START = BATCH2_END + 1; // 219
   const BATCH3_END = BATCH3_START + BATCH3_LENGTH - 1; // 275
 
-  // Batch 4 (Macadamia Nuts → Jukebox, 81 puzzles): days 276 onward
-  const BATCH4_LENGTH = 81;
+  // Batch 4 (Macadamia Nuts → Jukebox, 79 puzzles): days 276 onward
+  const BATCH4_LENGTH = 79;
   const BATCH4_START = BATCH3_END + 1; // 276 (= Dec 10, 2026)
 
   let puzzleIndex;
